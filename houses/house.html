@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/styles.css">
+    <link rel="stylesheet" href="public/gallery/flickity.css">
+    <title>House</title>
+</head>
+<script src="/public/gallery/flickity.pkgd.js"></script>
+
+<body class="font-lexend max-w-[1920px]">
+    <!--mainscreen-->
+    <section>
+        <img src="public/images/blur_green.png" class="absolute -z-10" alt="">
+        <header
+            class="absolute w-full max-w-[1920px] px-[120px] lg:px-[60px] md:px-[20px] xs:px-[15px]  mt-[45px] xs:mt-[25px] flex items-center justify-between">
+            <!--logo header-->
+            <div class="flex gap-3 items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                    <path
+                        d="M0 4C0 1.79086 1.79086 0 4 0H28C30.2091 0 32 1.79086 32 4V8C32 21.2548 21.2548 32 8 32H4C1.79086 32 0 30.2091 0 28V4Z"
+                        fill="#F59E0B" />
+                    <path
+                        d="M4 8C4 5.79086 5.79086 4 8 4H32C34.2091 4 36 5.79086 36 8V12C36 25.2548 25.2548 36 12 36H8C5.79086 36 4 34.2091 4 32V8Z"
+                        fill="#4BE4C9" />
+                </svg>
+                <a href="" class="text-base font-bold text-darkblue">Hounter</a>
+            </div>
+            <div class="flex gap-6 items-center justify-end md:hidden">
+                <a href=""
+                    class="px-4 py-2 bg-white bg-opacity-10 rounded-[32px] border border-white border-opacity-30 text-indigo-50 text-sm font-semibold capitalize">About
+                    Us</a>
+                <a href=""
+                    class="px-4 py-2 bg-white bg-opacity-10 rounded-[32px] border border-white border-opacity-30 text-indigo-50 text-sm font-semibold capitalize">Article</a>
+                <a href=""
+                    class="flex gap-[10px] items-center px-4 py-2 bg-white bg-opacity-10 rounded-[32px] border border-white border-opacity-30 text-indigo-50 text-sm font-semibold capitalize">
+                    <span>Property</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                        <path
+                            d="M14.6236 7.12001C14.624 6.94625 14.5631 6.77784 14.4515 6.64404C14.3887 6.56874 14.3116 6.50649 14.2245 6.46086C14.1374 6.41523 14.0421 6.38712 13.9441 6.37814C13.8461 6.36916 13.7473 6.37948 13.6533 6.40852C13.5593 6.43756 13.472 6.48474 13.3964 6.54736L9.38526 9.87916L5.36668 6.66635C5.29013 6.60458 5.20205 6.55844 5.10751 6.53061C5.01296 6.50277 4.91381 6.49377 4.81576 6.50414C4.71771 6.51451 4.62268 6.54403 4.53614 6.59101C4.44961 6.638 4.37327 6.70151 4.31151 6.77791C4.24339 6.85486 4.192 6.94497 4.16058 7.04259C4.12916 7.14021 4.11838 7.24323 4.12892 7.34519C4.13946 7.44715 4.17109 7.54584 4.22183 7.63507C4.27257 7.7243 4.34132 7.80215 4.42377 7.86372L8.91381 11.4558C9.04771 11.5652 9.21567 11.625 9.38901 11.625C9.56234 11.625 9.7303 11.5652 9.8642 11.4558L14.3542 7.73729C14.4448 7.66268 14.5164 7.56791 14.5632 7.46066C14.61 7.35341 14.6307 7.23671 14.6236 7.12001Z"
+                            fill="white" />
+                    </svg>
+                </a>
+            </div>
+            <!--mobile menu-->
+            <nav class="hidden fixed left-0 top-0 right-0 bottom-0 items-center justify-center bg-white animate-fadeIn"
+                id="mobile_menu">
+                <img src="public/images/blur_green.png" class="absolute -z-10" alt="">
+                <ul class="flex flex-col items-center justify-center h-full gap-10">
+                    <li><a href=""
+                            class="text-2xl font-medium text-darkblue px-6 py-2 rounded-[32px] border border-darkblue">About</a>
+                    </li>
+                    <li><a href=""
+                            class="text-2xl font-medium text-darkblue px-6 py-2 rounded-[32px] border border-darkblue">Article</a>
+                    </li>
+                    <li><a href=""
+                            class="text-2xl font-medium text-darkblue px-6 py-2 rounded-[32px] border border-darkblue">Property</a>
+                    </li>
+                </ul>
+            </nav>
+            <!--burger button-->
+            <button class="hidden md:block group relative h-6 w-[30px] z-20" id="burger">
+                <span
+                    class="absolute top-0 h-[2px] left-0 w-full bg-darkblue transition-all group-[.active]:translate-y-2 group-[.active]:rotate-45"></span>
+                <span
+                    class="absolute top-1/2 h-[2px] left-0 w-full bg-darkblue transition-all group-[.active]:opacity-0"></span>
+                <span
+                    class="absolute bottom-0 h-[2px] left-0 w-full bg-darkblue transition-all group-[.active]:-translate-y-[14px] group-[.active]:-rotate-45"></span>
+            </button>
+
+        </header>
+        <div class="ml-[120px] lg:ml-[60px] md:ml-0 grid grid-cols-2 gap-4 md:grid-cols-1">
+            <!--1 side-->
+            <div class="mt-[45px] md:px-[20px] xs:px-[10px] md:mx-auto">
+
+                <h1 class="mt-[100px] sm:mt-[50px] text-[40px] capitalize text-darkblue font-extrabold leading-normal">
+                    find
+                    the place to <br>
+                    live <span class="text-white text-shadow-textStroke">your dreams</span> <br> easily here</h1>
+                <p class="mt-6 text-base text-lightgray">Everything you need about finding your place to live will be
+                    here,<br> where it will be easier for you</p>
+
+                <div
+                    class="mt-[32px] p-1 pl-6 xs:pl-2 flex justify-between w-[496px] lg:w-[436px] xs:w-full rounded-[32px] border border-zinc-200">
+                    <div class="flex gap-4 xs:gap-1 items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M12 1C14.3869 1 16.6761 1.99337 18.364 3.76159C20.0518 5.5298 21 7.92801 21 10.4286C21 14.934 18.0975 19.081 12.402 22.8776C12.2818 22.9575 12.1424 23 12 23C11.8576 23 11.7182 22.9575 11.598 22.8776C5.9025 19.081 3 14.934 3 10.4286C3 7.92801 3.94821 5.5298 5.63604 3.76159C7.32387 1.99337 9.61305 1 12 1ZM12 7.28576C11.2044 7.28576 10.4413 7.61689 9.87868 8.20629C9.31607 8.7957 9 9.5951 9 10.4286C9 11.2622 9.31607 12.0616 9.87868 12.651C10.4413 13.2404 11.2044 13.5715 12 13.5715C12.7956 13.5715 13.5587 13.2404 14.1213 12.651C14.6839 12.0616 15 11.2622 15 10.4286C15 9.5951 14.6839 8.7957 14.1213 8.20629C13.5587 7.61689 12.7956 7.28576 12 7.28576Z"
+                                fill="#F59E0B" />
+                        </svg>
+                        <input class="border-none" type="text" placeholder="Search for the location you want!">
+                    </div>
+                    <a href=""
+                        class="flex gap-1  items-center justify-center rounded-[32px] bg-lightgreen px-4 py-3 xs:px-2 xs:gap-0">
+                        <span class="text-[14px] text-white font-semibold leading-[22px]">Search</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M9.99335 5.0018C9.76166 5.00135 9.53713 5.08254 9.35872 5.2313C9.25831 5.31506 9.17532 5.41793 9.11448 5.53402C9.05364 5.65011 9.01616 5.77714 9.00419 5.90782C8.99221 6.03851 9.00598 6.17029 9.0447 6.29562C9.08341 6.42094 9.14632 6.53735 9.22981 6.63818L13.6722 11.9863L9.38847 17.3444C9.3061 17.4465 9.24459 17.5639 9.20747 17.69C9.17036 17.8161 9.15837 17.9482 9.17219 18.079C9.18601 18.2097 9.22537 18.3364 9.28802 18.4518C9.35066 18.5672 9.43535 18.669 9.53721 18.7513C9.63981 18.8421 9.75996 18.9107 9.89012 18.9526C10.0203 18.9945 10.1576 19.0088 10.2936 18.9948C10.4295 18.9807 10.5611 18.9385 10.6801 18.8709C10.7991 18.8032 10.9029 18.7116 10.985 18.6016L15.7744 12.6149C15.9203 12.4364 16 12.2124 16 11.9813C16 11.7502 15.9203 11.5263 15.7744 11.3477L10.8164 5.36101C10.7169 5.24026 10.5905 5.14481 10.4475 5.0824C10.3045 5.01999 10.1489 4.99238 9.99335 5.0018Z"
+                                fill="white" />
+                        </svg>
+                    </a>
+                </div>
+
+                <span class="block mt-[32px] text-base text-lightgray font-normal leading-loose ">Our Partnership</span>
+                <div class="grid grid-cols-4 max-w-[427px] justify-items-center gap-8 xs:grid-cols-2 xs:gap-1">
+                    <img src="public/images/traveloka_logo 2.png" alt="">
+                    <img src="public/images/traveloka_logo 5.png" alt="">
+                    <img src="public/images/traveloka_logo 3.png" alt="">
+                    <img src="public/images/traveloka_logo 4.png" alt="">
+                </div>
+
+            </div>
+            <!--2 side-->
+            <div
+                class="pb-12 pl-12 overflow-x-hidden bg-[url('/public/images/mainscreen_image.png')] bg-cover h-[720px] rounded-bl-[80px] flex items-end md:items-center md:justify-center md:pb-0 md:pl-0">
+                <div class="flex gap-4 overflow-x-hidden h-[104px] flex-shrink-0 md:h-fit md:flex-col" class="  mt-10" data-flickity-options='{"prevNextButtons": false, "initialIndex": 1 }'>
+                    <div class="p-6  flex gap-4 rounded-[32px] bg-white items-center">
+                        <img src="public/images/people.png" alt="">
+                        <div class="flex flex-col gap-0.5 justify-center">
+                            <span class="text-base leading-6 text-darkblue font-semibold">1K+ People</span>
+                            <span class="text-xs font-normal leading-tight text-lightgray">Successfully Getting
+                                Home</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6  flex gap-4 rounded-[32px] bg-white items-center">
+                        <img src="public/images/people_1.png" alt="">
+                        <div class="flex flex-col gap-0.5 justify-center">
+                            <span class="text-base leading-6 text-darkblue font-semibold">56 Houses</span>
+                            <span class="text-xs font-normal leading-tight text-lightgray">Sold Monthly</span>
+                        </div>
+                    </div>
+
+                    <div class="p-6  flex gap-4 rounded-[32px] bg-white items-center">
+                        <img src="public/images/people_2.png" alt="">
+                        <div class="flex flex-col gap-0.5 justify-center">
+                            <span class="text-base leading-6 text-darkblue font-semibold">4K+</span>
+                            <span class="text-xs font-normal leading-tight text-lightgray">People Looking for New
+                                Homes</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--section 1-->
+    <section class="mt-[150px] md:mt-[80px]">
+        <div
+            class="mx-auto px-10 flex justify-between items-end w-[1200px] lg:w-full md:flex-col md:gap-4 md:items-center sm:px-5">
+            <h2 class="text-[32px] text-darkblue font-semibold capitalize">Featured House</h2>
+            <div class="flex gap-8 justify-center sm:gap-3 sm:flex-wrap">
+                <div
+                    class="tab-trigger active group flex items-center gap-2 px-6 py-3 rounded-[32px] border border-lightgray [&.active]:border-none [&.active]:bg-[#D1FAE5] transition-all">
+                    <span class="text-lg leading-7 font-medium text-lightgray group-[.active]:text-[#10B981]">All</span>
+                </div>
+                <div
+                    class="tab-trigger group flex items-center gap-2 px-6 py-3 rounded-[32px] border border-lightgray [&.active]:border-none [&.active]:bg-[#D1FAE5] transition-all">
+                    <!--active svg-->
+                    <svg class="fill-[#888B97] group-[.active]:fill-[#10B981]" xmlns="http://www.w3.org/2000/svg"
+                        width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M21 10.8319V19.5C20.9998 19.7719 20.9262 20.0386 20.7868 20.272C20.6475 20.5054 20.4476 20.6968 20.2084 20.8259C19.9916 20.9432 19.7485 21.0031 19.5021 20.9999H14.9967C14.7978 20.9999 14.607 20.9209 14.4664 20.7803C14.3257 20.6396 14.2467 20.4488 14.2467 20.2499V15.7493C14.2467 15.5504 14.1677 15.3596 14.0271 15.2189C13.8864 15.0783 13.6956 14.9993 13.4967 14.9993H10.4967C10.2978 14.9993 10.107 15.0783 9.9664 15.2189C9.82574 15.3596 9.74673 15.5504 9.74673 15.7493V20.2499C9.74673 20.4488 9.66771 20.6396 9.52706 20.7803C9.3864 20.9209 9.19564 20.9999 8.99673 20.9999H4.5002C4.28754 21.0005 4.07723 20.9556 3.88335 20.8682C3.68948 20.7808 3.51651 20.653 3.37604 20.4934C3.12946 20.2082 2.99571 19.8427 3.00001 19.4657V10.8318C3.00017 10.6228 3.04392 10.4162 3.12846 10.225C3.21299 10.0339 3.33646 9.86251 3.49098 9.7218L10.9903 2.90308C11.2658 2.65075 11.6258 2.51078 11.9994 2.51074C12.3729 2.51071 12.733 2.65062 13.0085 2.90289L20.5091 9.72189C20.6636 9.86263 20.787 10.034 20.8716 10.2252C20.9561 10.4163 20.9998 10.6229 21 10.8319Z" />
+                    </svg>
+                    <span
+                        class="text-lg leading-7 font-medium text-lightgray group-[.active]:text-[#10B981]">House</span>
+                </div>
+                <div
+                    class="tab-trigger group flex items-center gap-2 px-6 py-3 rounded-[32px] border border-lightgray  [&.active]:border-none [&.active]:bg-[#D1FAE5] transition-all">
+                    <svg class="fill-[#888B97] group-[.active]:fill-[#10B981]" xmlns="http://www.w3.org/2000/svg"
+                        width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M7 20.9999H4C3.45 20.9999 3 20.5499 3 19.9999V8.68994C3 8.26994 3.25 7.89994 3.64 7.74994L14.64 3.51994C14.7921 3.46126 14.9561 3.44064 15.118 3.45986C15.2798 3.47909 15.4345 3.53758 15.5686 3.63025C15.7027 3.72292 15.8121 3.84696 15.8873 3.99156C15.9624 4.13617 16.0012 4.29696 16 4.45994V9.99994H8C7.45 9.99994 7 10.4499 7 10.9999V20.9999ZM17 11.9999H10C9.45 11.9999 9 12.4499 9 12.9999V19.9999C9 20.5499 9.45 20.9999 10 20.9999H14V16.9999C14 16.4499 14.45 15.9999 15 15.9999C15.55 15.9999 16 16.4499 16 16.9999V20.9999H20C20.55 20.9999 21 20.5499 21 19.9999V11.9999C21 10.8999 20.1 9.99994 19 9.99994C17.9 9.99994 17 10.8999 17 11.9999Z" />
+                    </svg>
+                    <span
+                        class="text-lg leading-7 font-medium text-lightgray group-[.active]:text-[#10B981]">Villa</span>
+                </div>
+                <div
+                    class="tab-trigger group flex items-center gap-2 px-6 py-3 rounded-[32px] border border-lightgray  [&.active]:border-none [&.active]:bg-[#D1FAE5] transition-all">
+                    <svg class="fill-[#888B97] group-[.active]:fill-[#10B981]" xmlns="http://www.w3.org/2000/svg"
+                        width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M17 11V5C17 3.9 16.1 3 15 3H9C7.9 3 7 3.9 7 5V7H5C3.9 7 3 7.9 3 9V19C3 20.1 3.9 21 5 21H11V17H13V21H19C20.1 21 21 20.1 21 19V13C21 11.9 20.1 11 19 11H17ZM7 19H5V17H7V19ZM7 15H5V13H7V15ZM7 11H5V9H7V11ZM11 15H9V13H11V15ZM11 11H9V9H11V11ZM11 7H9V5H11V7ZM15 15H13V13H15V15ZM15 11H13V9H15V11ZM15 7H13V5H15V7ZM19 19H17V17H19V19ZM19 15H17V13H19V15Z" />
+                    </svg>
+                    <span
+                        class="text-lg leading-7 font-medium text-lightgray group-[.active]:text-[#10B981]">Apartment</span>
+                </div>
+            </div>
+
+        </div>
+        <div
+            class="tab-content mt-10 animate-fadeIn mx-auto px-10 grid grid-cols-4 gap-10 md:grid-cols-2 xs:grid-cols-1 sm:px-5 xs:gap-12 justify-items-center max-w-[1600px]">
+            <div class="max-w-[340px] flex flex-col gap-6">
+                <div class="relative">
+                    <div
+                        class="absolute bottom-4 left-4 flex gap-[10px] items-center py-2 px-4 rounded-[32px] bg-[#FEE2E2]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path
+                                d="M13.0328 7.33118C12.7295 6.64846 12.2885 6.03568 11.7375 5.53118L11.2828 5.114C11.2674 5.10022 11.2488 5.09044 11.2287 5.08552C11.2086 5.0806 11.1876 5.0807 11.1675 5.08579C11.1475 5.09088 11.129 5.10081 11.1137 5.11472C11.0984 5.12863 11.0867 5.14609 11.0797 5.16556L10.8766 5.74837C10.75 6.114 10.5172 6.48743 10.1875 6.85462C10.1656 6.87806 10.1406 6.88431 10.1234 6.88587C10.1063 6.88743 10.0797 6.88431 10.0562 6.86243C10.0344 6.84368 10.0234 6.81556 10.025 6.78743C10.0828 5.84681 9.80156 4.78587 9.18594 3.63118C8.67656 2.67181 7.96875 1.92337 7.08437 1.4015L6.43906 1.02181C6.35469 0.971808 6.24688 1.03743 6.25156 1.13587L6.28594 1.88587C6.30937 2.39837 6.25 2.8515 6.10938 3.22806C5.9375 3.689 5.69062 4.11712 5.375 4.5015C5.15535 4.76863 4.90639 5.01024 4.63281 5.22181C3.97391 5.72832 3.43815 6.37733 3.06562 7.12025C2.69402 7.86964 2.50045 8.69471 2.5 9.53118C2.5 10.2687 2.64531 10.9827 2.93281 11.6562C3.21042 12.3046 3.61103 12.893 4.1125 13.389C4.61875 13.889 5.20625 14.2827 5.86094 14.5562C6.53906 14.8406 7.25781 14.9843 8 14.9843C8.74219 14.9843 9.46094 14.8406 10.1391 14.5577C10.7921 14.2859 11.386 13.8895 11.8875 13.3906C12.3938 12.8906 12.7906 12.3062 13.0672 11.6577C13.3543 10.9861 13.5015 10.2631 13.5 9.53274C13.5 8.77024 13.3438 8.02962 13.0328 7.33118Z"
+                                fill="#EF4444" />
+                        </svg>
+                        <span class="text-[#EF4444]">Popular</span>
+                    </div>
+                    <img src="public/images/section_1_1.png" alt="">
+
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="text-[24px] sm:text-xl font-medium text-[#0E1735] leading-8">Roselands House</span>
+                    <span class="text-xl sm:text-lg font-medium leading-8 text-[#3C4563]">$ 35.000.000</span>
+                </div>
+                <div class="flex gap-4 rounded-[32px] bg-white items-center">
+                    <img src="public/images/dude_1.png" alt="">
+                    <div class="flex flex-col gap-1 justify-center">
+                        <span class="text-lg sm:text-base leading-6 text-[#0E1735] left-6 font-medium">Dianne
+                            Russell</span>
+                        <span class="text-sm sm:text-xs font-medium leading-[22px] text-lightgray">Manchester,
+                            Kentucky</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="max-w-[340px] flex flex-col gap-6">
+                <div class="relative">
+                    <div
+                        class="absolute bottom-4 left-4 flex gap-[10px] items-center py-2 px-4 rounded-[32px] bg-[#DBEAFE]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path
+                                d="M14 7.22126V13C13.9999 13.1812 13.9508 13.3591 13.8579 13.5147C13.765 13.6703 13.6317 13.7979 13.4723 13.8839C13.3278 13.9622 13.1657 14.0021 13.0014 13.9999H9.99782C9.86521 13.9999 9.73803 13.9473 9.64426 13.8535C9.5505 13.7597 9.49782 13.6326 9.49782 13.4999V10.4995C9.49782 10.3669 9.44514 10.2397 9.35137 10.146C9.2576 10.0522 9.13043 9.99951 8.99782 9.99951H6.99782C6.86521 9.99951 6.73803 10.0522 6.64426 10.146C6.5505 10.2397 6.49782 10.3669 6.49782 10.4995V13.4999C6.49782 13.6326 6.44514 13.7597 6.35137 13.8535C6.2576 13.9473 6.13043 13.9999 5.99782 13.9999H3.00013C2.85836 14.0003 2.71816 13.9704 2.5889 13.9121C2.45965 13.8539 2.34434 13.7687 2.25069 13.6623C2.08631 13.4721 1.99714 13.2285 2.00001 12.9771V7.2212C2.00011 7.08187 2.02928 6.9441 2.08564 6.81669C2.142 6.68927 2.22431 6.57501 2.32732 6.4812L7.32688 1.93539C7.51053 1.76717 7.75053 1.67385 7.99957 1.67383C8.24862 1.6738 8.48864 1.76708 8.67232 1.93526L13.6728 6.48126C13.7757 6.57509 13.858 6.68935 13.9144 6.81677C13.9707 6.94418 13.9999 7.08194 14 7.22126Z"
+                                fill="#1D4ED8" />
+                        </svg>
+                        <span class="text-[#1D4ED8]">New house</span>
+                    </div>
+                    <img src="public/images/section_1_2.png" alt="">
+
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="text-[24px] sm:text-xl font-medium text-[#0E1735] leading-8">Woodlandside</span>
+                    <span class="text-xl sm:text-lg font-medium leading-8 text-[#3C4563]">$ 20.000.000</span>
+                </div>
+                <div class="flex gap-4 rounded-[32px] bg-white items-center">
+                    <img src="public/images/dude_2.png" alt="">
+                    <div class="flex flex-col gap-1 justify-center">
+                        <span class="text-lg sm:text-base leading-6 text-[#0E1735] left-6 font-medium">Robert Fox</span>
+                        <span class="text-sm sm:text-xs font-medium leading-[22px] text-lightgray">Dr. San Jose, South
+                            Dakota</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="max-w-[340px] flex flex-col gap-6">
+                <div class="relative">
+                    <div
+                        class="absolute bottom-4 left-4 flex gap-[10px] items-center py-2 px-4 rounded-[32px] bg-[#D1FAE5]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path
+                                d="M12.8 4.79999H2.79998V4.39999L11.6 3.69599V4.39999H12.8V3.19999C12.8 2.31999 12.0872 1.70239 11.2168 1.82639L3.18398 2.97359C2.31278 3.09839 1.59998 3.91999 1.59998 4.79999V12.8C1.59998 13.2243 1.76855 13.6313 2.0686 13.9314C2.36866 14.2314 2.77563 14.4 3.19998 14.4H12.8C13.2243 14.4 13.6313 14.2314 13.9313 13.9314C14.2314 13.6313 14.4 13.2243 14.4 12.8V6.39999C14.4 5.97564 14.2314 5.56868 13.9313 5.26862C13.6313 4.96856 13.2243 4.79999 12.8 4.79999ZM11.6 10.4048C11.4423 10.4047 11.2863 10.3736 11.1406 10.3133C10.995 10.2529 10.8627 10.1644 10.7513 10.0529C10.6399 9.94141 10.5515 9.80905 10.4912 9.66339C10.4309 9.51773 10.3999 9.36163 10.4 9.20399C10.4 9.04635 10.4311 8.89027 10.4915 8.74465C10.5519 8.59903 10.6403 8.46673 10.7518 8.3553C10.8634 8.24387 10.9957 8.15549 11.1414 8.09521C11.287 8.03493 11.4431 8.00394 11.6008 8.00399C11.9191 8.0041 12.2244 8.13067 12.4495 8.35586C12.6745 8.58105 12.8009 8.88642 12.8008 9.20479C12.8007 9.52315 12.6741 9.82844 12.4489 10.0535C12.2237 10.2785 11.9183 10.4049 11.6 10.4048Z"
+                                fill="#047857" />
+                        </svg>
+                        <span class="text-[#047857]">Best Deals</span>
+                    </div>
+                    <img src="public/images/section_1_3.png" alt="">
+
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="text-[24px] font-medium text-[#0E1735] leading-8">The Old Lighthouse</span>
+                    <span class="text-xl font-medium leading-8 text-[#3C4563]">$ 44.000.000</span>
+                </div>
+                <div class="flex gap-4 rounded-[32px] bg-white items-center">
+                    <img src="public/images/dude_3.png" alt="">
+                    <div class="flex flex-col gap-1 justify-center">
+                        <span class="text-lg leading-6 text-[#0E1735] left-6 font-medium">Ronald Richards</span>
+                        <span class="text-sm font-medium leading-[22px] text-lightgray">Santa Ana, Illinois</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="max-w-[340px] flex flex-col gap-6">
+                <div class="relative">
+                    <div
+                        class="absolute bottom-4 left-4 flex gap-[10px] items-center py-2 px-4 rounded-[32px] bg-[#FEE2E2]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path
+                                d="M13.0328 7.33118C12.7295 6.64846 12.2885 6.03568 11.7375 5.53118L11.2828 5.114C11.2674 5.10022 11.2488 5.09044 11.2287 5.08552C11.2086 5.0806 11.1876 5.0807 11.1675 5.08579C11.1475 5.09088 11.129 5.10081 11.1137 5.11472C11.0984 5.12863 11.0867 5.14609 11.0797 5.16556L10.8766 5.74837C10.75 6.114 10.5172 6.48743 10.1875 6.85462C10.1656 6.87806 10.1406 6.88431 10.1234 6.88587C10.1063 6.88743 10.0797 6.88431 10.0562 6.86243C10.0344 6.84368 10.0234 6.81556 10.025 6.78743C10.0828 5.84681 9.80156 4.78587 9.18594 3.63118C8.67656 2.67181 7.96875 1.92337 7.08437 1.4015L6.43906 1.02181C6.35469 0.971808 6.24688 1.03743 6.25156 1.13587L6.28594 1.88587C6.30937 2.39837 6.25 2.8515 6.10938 3.22806C5.9375 3.689 5.69062 4.11712 5.375 4.5015C5.15535 4.76863 4.90639 5.01024 4.63281 5.22181C3.97391 5.72832 3.43815 6.37733 3.06562 7.12025C2.69402 7.86964 2.50045 8.69471 2.5 9.53118C2.5 10.2687 2.64531 10.9827 2.93281 11.6562C3.21042 12.3046 3.61103 12.893 4.1125 13.389C4.61875 13.889 5.20625 14.2827 5.86094 14.5562C6.53906 14.8406 7.25781 14.9843 8 14.9843C8.74219 14.9843 9.46094 14.8406 10.1391 14.5577C10.7921 14.2859 11.386 13.8895 11.8875 13.3906C12.3938 12.8906 12.7906 12.3062 13.0672 11.6577C13.3543 10.9861 13.5015 10.2631 13.5 9.53274C13.5 8.77024 13.3438 8.02962 13.0328 7.33118Z"
+                                fill="#EF4444" />
+                        </svg>
+                        <span class="text-[#EF4444]">Popular</span>
+                    </div>
+                    <img src="public/images/section_1_4.png" alt="">
+
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="text-[24px] font-medium text-[#0E1735] leading-8">Cosmo's House</span>
+                    <span class="text-xl font-medium leading-8 text-[#3C4563]">$ 22.000.000</span>
+                </div>
+                <div class="flex gap-4 rounded-[32px] bg-white items-center">
+                    <img src="public/images/dude_4.png" alt="">
+                    <div class="flex flex-col gap-1 justify-center">
+                        <span class="text-lg leading-6 text-[#0E1735] left-6 font-medium">Jenny Wilson</span>
+                        <span class="text-sm font-medium leading-[22px] text-lightgray">Preston Rd. Inglewood, Maine
+                            98380</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div
+            class="hidden tab-content animate-fadeIn mx-auto  mt-10 px-10 grid grid-cols-4 gap-10 md:grid-cols-2 xs:grid-cols-1 sm:px-5 xs:gap-12 justify-items-center max-w-[1600px]">
+            <div class="max-w-[340px] flex flex-col gap-6">
+                <div class="relative">
+                    <div
+                        class="absolute bottom-4 left-4 flex gap-[10px] items-center py-2 px-4 rounded-[32px] bg-[#FEE2E2]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path
+                                d="M13.0328 7.33118C12.7295 6.64846 12.2885 6.03568 11.7375 5.53118L11.2828 5.114C11.2674 5.10022 11.2488 5.09044 11.2287 5.08552C11.2086 5.0806 11.1876 5.0807 11.1675 5.08579C11.1475 5.09088 11.129 5.10081 11.1137 5.11472C11.0984 5.12863 11.0867 5.14609 11.0797 5.16556L10.8766 5.74837C10.75 6.114 10.5172 6.48743 10.1875 6.85462C10.1656 6.87806 10.1406 6.88431 10.1234 6.88587C10.1063 6.88743 10.0797 6.88431 10.0562 6.86243C10.0344 6.84368 10.0234 6.81556 10.025 6.78743C10.0828 5.84681 9.80156 4.78587 9.18594 3.63118C8.67656 2.67181 7.96875 1.92337 7.08437 1.4015L6.43906 1.02181C6.35469 0.971808 6.24688 1.03743 6.25156 1.13587L6.28594 1.88587C6.30937 2.39837 6.25 2.8515 6.10938 3.22806C5.9375 3.689 5.69062 4.11712 5.375 4.5015C5.15535 4.76863 4.90639 5.01024 4.63281 5.22181C3.97391 5.72832 3.43815 6.37733 3.06562 7.12025C2.69402 7.86964 2.50045 8.69471 2.5 9.53118C2.5 10.2687 2.64531 10.9827 2.93281 11.6562C3.21042 12.3046 3.61103 12.893 4.1125 13.389C4.61875 13.889 5.20625 14.2827 5.86094 14.5562C6.53906 14.8406 7.25781 14.9843 8 14.9843C8.74219 14.9843 9.46094 14.8406 10.1391 14.5577C10.7921 14.2859 11.386 13.8895 11.8875 13.3906C12.3938 12.8906 12.7906 12.3062 13.0672 11.6577C13.3543 10.9861 13.5015 10.2631 13.5 9.53274C13.5 8.77024 13.3438 8.02962 13.0328 7.33118Z"
+                                fill="#EF4444" />
+                        </svg>
+                        <span class="text-[#EF4444]">Popular</span>
+                    </div>
+                    <img src="public/images/section_1_1.png" alt="">
+
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="text-[24px] sm:text-xl font-medium text-[#0E1735] leading-8">Roselands House</span>
+                    <span class="text-xl sm:text-lg font-medium leading-8 text-[#3C4563]">$ 35.000.000</span>
+                </div>
+                <div class="flex gap-4 rounded-[32px] bg-white items-center">
+                    <img src="public/images/dude_1.png" alt="">
+                    <div class="flex flex-col gap-1 justify-center">
+                        <span class="text-lg sm:text-base leading-6 text-[#0E1735] left-6 font-medium">Dianne
+                            Russell</span>
+                        <span class="text-sm sm:text-xs font-medium leading-[22px] text-lightgray">Manchester,
+                            Kentucky</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="max-w-[340px] flex flex-col gap-6">
+                <div class="relative">
+                    <div
+                        class="absolute bottom-4 left-4 flex gap-[10px] items-center py-2 px-4 rounded-[32px] bg-[#DBEAFE]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path
+                                d="M14 7.22126V13C13.9999 13.1812 13.9508 13.3591 13.8579 13.5147C13.765 13.6703 13.6317 13.7979 13.4723 13.8839C13.3278 13.9622 13.1657 14.0021 13.0014 13.9999H9.99782C9.86521 13.9999 9.73803 13.9473 9.64426 13.8535C9.5505 13.7597 9.49782 13.6326 9.49782 13.4999V10.4995C9.49782 10.3669 9.44514 10.2397 9.35137 10.146C9.2576 10.0522 9.13043 9.99951 8.99782 9.99951H6.99782C6.86521 9.99951 6.73803 10.0522 6.64426 10.146C6.5505 10.2397 6.49782 10.3669 6.49782 10.4995V13.4999C6.49782 13.6326 6.44514 13.7597 6.35137 13.8535C6.2576 13.9473 6.13043 13.9999 5.99782 13.9999H3.00013C2.85836 14.0003 2.71816 13.9704 2.5889 13.9121C2.45965 13.8539 2.34434 13.7687 2.25069 13.6623C2.08631 13.4721 1.99714 13.2285 2.00001 12.9771V7.2212C2.00011 7.08187 2.02928 6.9441 2.08564 6.81669C2.142 6.68927 2.22431 6.57501 2.32732 6.4812L7.32688 1.93539C7.51053 1.76717 7.75053 1.67385 7.99957 1.67383C8.24862 1.6738 8.48864 1.76708 8.67232 1.93526L13.6728 6.48126C13.7757 6.57509 13.858 6.68935 13.9144 6.81677C13.9707 6.94418 13.9999 7.08194 14 7.22126Z"
+                                fill="#1D4ED8" />
+                        </svg>
+                        <span class="text-[#1D4ED8]">New house</span>
+                    </div>
+                    <img src="public/images/section_1_2.png" alt="">
+
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="text-[24px] sm:text-xl font-medium text-[#0E1735] leading-8">Woodlandside</span>
+                    <span class="text-xl sm:text-lg font-medium leading-8 text-[#3C4563]">$ 20.000.000</span>
+                </div>
+                <div class="flex gap-4 rounded-[32px] bg-white items-center">
+                    <img src="public/images/dude_2.png" alt="">
+                    <div class="flex flex-col gap-1 justify-center">
+                        <span class="text-lg sm:text-base leading-6 text-[#0E1735] left-6 font-medium">Robert Fox</span>
+                        <span class="text-sm sm:text-xs font-medium leading-[22px] text-lightgray">Dr. San Jose, South
+                            Dakota</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div
+            class="hidden tab-content animate-fadeIn mx-auto  mt-10 px-10 grid grid-cols-4 gap-10 md:grid-cols-2 xs:grid-cols-1 sm:px-5 xs:gap-12 justify-items-center max-w-[1600px]">
+            <div class="max-w-[340px] flex flex-col gap-6">
+                <div class="relative">
+                    <div
+                        class="absolute bottom-4 left-4 flex gap-[10px] items-center py-2 px-4 rounded-[32px] bg-[#D1FAE5]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path
+                                d="M12.8 4.79999H2.79998V4.39999L11.6 3.69599V4.39999H12.8V3.19999C12.8 2.31999 12.0872 1.70239 11.2168 1.82639L3.18398 2.97359C2.31278 3.09839 1.59998 3.91999 1.59998 4.79999V12.8C1.59998 13.2243 1.76855 13.6313 2.0686 13.9314C2.36866 14.2314 2.77563 14.4 3.19998 14.4H12.8C13.2243 14.4 13.6313 14.2314 13.9313 13.9314C14.2314 13.6313 14.4 13.2243 14.4 12.8V6.39999C14.4 5.97564 14.2314 5.56868 13.9313 5.26862C13.6313 4.96856 13.2243 4.79999 12.8 4.79999ZM11.6 10.4048C11.4423 10.4047 11.2863 10.3736 11.1406 10.3133C10.995 10.2529 10.8627 10.1644 10.7513 10.0529C10.6399 9.94141 10.5515 9.80905 10.4912 9.66339C10.4309 9.51773 10.3999 9.36163 10.4 9.20399C10.4 9.04635 10.4311 8.89027 10.4915 8.74465C10.5519 8.59903 10.6403 8.46673 10.7518 8.3553C10.8634 8.24387 10.9957 8.15549 11.1414 8.09521C11.287 8.03493 11.4431 8.00394 11.6008 8.00399C11.9191 8.0041 12.2244 8.13067 12.4495 8.35586C12.6745 8.58105 12.8009 8.88642 12.8008 9.20479C12.8007 9.52315 12.6741 9.82844 12.4489 10.0535C12.2237 10.2785 11.9183 10.4049 11.6 10.4048Z"
+                                fill="#047857" />
+                        </svg>
+                        <span class="text-[#047857]">Best Deals</span>
+                    </div>
+                    <img src="public/images/section_1_3.png" alt="">
+
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="text-[24px] font-medium text-[#0E1735] leading-8">The Old Lighthouse</span>
+                    <span class="text-xl font-medium leading-8 text-[#3C4563]">$ 44.000.000</span>
+                </div>
+                <div class="flex gap-4 rounded-[32px] bg-white items-center">
+                    <img src="public/images/dude_3.png" alt="">
+                    <div class="flex flex-col gap-1 justify-center">
+                        <span class="text-lg leading-6 text-[#0E1735] left-6 font-medium">Ronald Richards</span>
+                        <span class="text-sm font-medium leading-[22px] text-lightgray">Santa Ana, Illinois</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="hidden tab-content animate-fadeIn mx-auto  mt-10 px-10 grid grid-cols-4 gap-10 md:grid-cols-2 xs:grid-cols-1 sm:px-5 xs:gap-12 justify-items-center max-w-[1600px]">
+
+            <div class="max-w-[340px] flex flex-col gap-6">
+                <div class="relative">
+                    <div
+                        class="absolute bottom-4 left-4 flex gap-[10px] items-center py-2 px-4 rounded-[32px] bg-[#FEE2E2]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path
+                                d="M13.0328 7.33118C12.7295 6.64846 12.2885 6.03568 11.7375 5.53118L11.2828 5.114C11.2674 5.10022 11.2488 5.09044 11.2287 5.08552C11.2086 5.0806 11.1876 5.0807 11.1675 5.08579C11.1475 5.09088 11.129 5.10081 11.1137 5.11472C11.0984 5.12863 11.0867 5.14609 11.0797 5.16556L10.8766 5.74837C10.75 6.114 10.5172 6.48743 10.1875 6.85462C10.1656 6.87806 10.1406 6.88431 10.1234 6.88587C10.1063 6.88743 10.0797 6.88431 10.0562 6.86243C10.0344 6.84368 10.0234 6.81556 10.025 6.78743C10.0828 5.84681 9.80156 4.78587 9.18594 3.63118C8.67656 2.67181 7.96875 1.92337 7.08437 1.4015L6.43906 1.02181C6.35469 0.971808 6.24688 1.03743 6.25156 1.13587L6.28594 1.88587C6.30937 2.39837 6.25 2.8515 6.10938 3.22806C5.9375 3.689 5.69062 4.11712 5.375 4.5015C5.15535 4.76863 4.90639 5.01024 4.63281 5.22181C3.97391 5.72832 3.43815 6.37733 3.06562 7.12025C2.69402 7.86964 2.50045 8.69471 2.5 9.53118C2.5 10.2687 2.64531 10.9827 2.93281 11.6562C3.21042 12.3046 3.61103 12.893 4.1125 13.389C4.61875 13.889 5.20625 14.2827 5.86094 14.5562C6.53906 14.8406 7.25781 14.9843 8 14.9843C8.74219 14.9843 9.46094 14.8406 10.1391 14.5577C10.7921 14.2859 11.386 13.8895 11.8875 13.3906C12.3938 12.8906 12.7906 12.3062 13.0672 11.6577C13.3543 10.9861 13.5015 10.2631 13.5 9.53274C13.5 8.77024 13.3438 8.02962 13.0328 7.33118Z"
+                                fill="#EF4444" />
+                        </svg>
+                        <span class="text-[#EF4444]">Popular</span>
+                    </div>
+                    <img src="public/images/section_1_4.png" alt="">
+
+                </div>
+                <div class="flex flex-col gap-2">
+                    <span class="text-[24px] font-medium text-[#0E1735] leading-8">Cosmo's House</span>
+                    <span class="text-xl font-medium leading-8 text-[#3C4563]">$ 22.000.000</span>
+                </div>
+                <div class="flex gap-4 rounded-[32px] bg-white items-center">
+                    <img src="public/images/dude_4.png" alt="">
+                    <div class="flex flex-col gap-1 justify-center">
+                        <span class="text-lg leading-6 text-[#0E1735] left-6 font-medium">Jenny Wilson</span>
+                        <span class="text-sm font-medium leading-[22px] text-lightgray">Preston Rd. Inglewood, Maine
+                            98380</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!--section 2-->
+    <section class="mt-[120px] md:mt-[80px] relative">
+        <img class="absolute -z-10 -top-[145px] right-0" src="public/images/blur_orange.png" alt="">
+        <div
+            class="w-[1200px] px-10 mx-auto lg:w-full flex items-center gap-4 justify-between pt-[56px] md:flex-col md:gap-10 sm:px-5">
+            <div>
+                <h2 class="text-darkblue text-[32px] font-semibold capitalize">Let’s tour and see our house!</h2>
+                <p class="pt-4 max-w-[413px] opacity-75 text-slate-500 text-base font-normal leading-7">Houses
+                    recommended by our partners that have been curated to become the home of your dreams!</p>
+                <span class="inline-block pt-4 opacity-75 text-darkblue text-base font-semibold leading-7">House
+                    Detail</span>
+                <!--icons-->
+                <div class="pt-4 grid grid-cols-2 grid-rows-2 gap-4">
+                    <div class="flex gap-4 items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path
+                                d="M23.8 14.7692C26.0713 14.7692 28 16.6618 28 19.0769V22.7692H26.2V24H25V22.7692H7V24H5.8V22.7692H4V19.0769C4 16.7474 5.86341 14.7692 8.2 14.7692H23.8ZM22.6 8C24.2133 8 25.6004 9.33021 25.6 11.0769L25.6004 14.017C25.0548 13.7102 24.4443 13.5385 23.8 13.5385L22.6 13.5378C22.6 12.4839 21.7586 11.6923 20.8 11.6923H17.2C16.739 11.6923 16.3185 11.87 16.0001 12.1623C15.682 11.8703 15.2613 11.6923 14.8 11.6923H11.2C10.2061 11.6923 9.40033 12.5185 9.4 13.5378L8.2 13.5385C7.55587 13.5385 6.9456 13.7101 6.4 14.0167V11.0769C6.4 9.4223 7.69394 8 9.4 8H22.6ZM14.8 12.9228C15.1256 12.9228 15.4 13.2305 15.4 13.5385L10.6 13.5378C10.6 13.1613 10.8923 12.9231 11.2 12.9231L14.8 12.9228ZM20.8 12.9272C21.1395 12.9228 21.3997 13.2225 21.4 13.5378H16.6C16.6 13.156 16.8923 12.9231 17.2 12.9231L20.8 12.9272Z"
+                                fill="#888B97" />
+                        </svg>
+                        <span class="w-[145.50px] text-slate-700 text-base font-medium capitalize">4 Bedrooms</span>
+                    </div>
+                    <div class="flex gap-4 items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none">
+                            <path
+                                d="M27.0391 15.9553H5.96092C5.13083 15.9553 4.45534 16.6308 4.45534 17.4609C4.45534 18.291 5.13083 18.9665 5.96092 18.9665H27.0391C27.8692 18.9665 28.5447 18.291 28.5447 17.4609C28.5447 16.6308 27.8692 15.9553 27.0391 15.9553Z"
+                                fill="#888B97" />
+                            <path
+                                d="M27.1776 17.9819C26.9056 17.9056 26.6325 18.0602 26.5573 18.3272L26.5181 18.4647H6.48281L6.44267 18.3272C6.36739 18.0602 6.09239 17.9076 5.82237 17.9819C5.55537 18.0581 5.4018 18.3362 5.47811 18.6022L6.86123 23.4441C7.2898 24.9447 8.67898 25.9926 10.2388 25.9926H22.7602C24.321 25.9926 25.7091 24.9447 26.1377 23.4441L27.5208 18.6022C27.5981 18.3362 27.4435 18.0581 27.1776 17.9819ZM10.2398 23.9851C9.57128 23.9851 8.97506 23.5364 8.79237 22.893L8.14097 20.6106C8.0647 20.3436 8.21926 20.0665 8.48523 19.9903C8.75421 19.914 9.03025 20.0695 9.10553 20.3356L9.75693 22.618C9.81918 22.8318 10.0169 22.9824 10.2397 22.9824C10.5167 22.9824 10.7416 23.2072 10.7416 23.4843C10.7416 23.7613 10.5168 23.9851 10.2398 23.9851Z"
+                                fill="#888B97" />
+                            <path
+                                d="M11.2034 25.0411C10.9555 24.9197 10.6554 25.017 10.5299 25.266L9.52617 27.2734C9.40271 27.5213 9.50307 27.8224 9.75102 27.9469C9.82428 27.9831 9.90059 28.0001 9.97587 28.0001C10.1596 28.0001 10.3362 27.8987 10.4245 27.7221L11.4282 25.7147C11.5517 25.4667 11.4513 25.1655 11.2034 25.0411Z"
+                                fill="#888B97" />
+                            <path
+                                d="M23.4738 27.2743L22.4701 25.2668C22.3457 25.0179 22.0445 24.9185 21.7966 25.042C21.5487 25.1664 21.4483 25.4676 21.5717 25.7155L22.5754 27.723C22.6638 27.8986 22.8404 28 23.0241 28C23.0994 28 23.1757 27.9829 23.249 27.9478C23.4969 27.8233 23.5973 27.5222 23.4738 27.2743Z"
+                                fill="#888B97" />
+                            <path
+                                d="M24.6151 4C24.1032 4 23.6214 4.19973 23.2591 4.5621L21.6662 6.15501C21.4705 6.35073 21.4705 6.66893 21.6662 6.86465C21.8619 7.06038 22.1801 7.06038 22.3758 6.86465L23.9687 5.27274C24.1403 5.10011 24.3702 5.00474 24.6201 5.00474C25.124 5.00474 25.5335 5.41426 25.5335 5.91811V16.4572C25.5335 16.7342 25.7583 16.9591 26.0354 16.9591C26.3124 16.9591 26.5372 16.7342 26.5382 16.4562V5.91713C26.5383 4.86021 25.6791 4 24.6151 4Z"
+                                fill="#888B97" />
+                            <path
+                                d="M22.8776 6.65681L21.8739 5.65311C21.7595 5.53868 21.5999 5.48547 21.4373 5.51257L18.928 5.92411C18.7433 5.95422 18.5917 6.08469 18.5325 6.26136C18.4733 6.43803 18.5185 6.63475 18.649 6.76822L21.6601 9.86973C21.7555 9.9691 21.887 10.0223 22.0195 10.0223C22.0666 10.0223 22.1148 10.0153 22.162 10.0012C22.3406 9.94905 22.4761 9.80151 22.5123 9.61881L23.0141 7.10952C23.0472 6.94588 22.996 6.77622 22.8776 6.65681Z"
+                                fill="#888B97" />
+                            <path
+                                d="M16.3525 10.0806C16.1567 9.88491 15.8385 9.88491 15.6428 10.0806L14.6391 11.0843C14.4434 11.2801 14.4434 11.5983 14.6391 11.794C14.7375 11.8913 14.8659 11.9405 14.9944 11.9405C15.1229 11.9405 15.2514 11.8914 15.3488 11.794L16.3525 10.7903C16.5482 10.5945 16.5482 10.2764 16.3525 10.0806Z"
+                                fill="#888B97" />
+                            <path
+                                d="M18.3599 12.088C18.1641 11.8922 17.846 11.8922 17.6502 12.088L16.6465 13.0917C16.4508 13.2874 16.4508 13.6056 16.6465 13.8013C16.7449 13.8987 16.8733 13.9479 17.0018 13.9479C17.1303 13.9479 17.2588 13.8987 17.3562 13.8013L18.3599 12.7976C18.5556 12.6019 18.5556 12.2837 18.3599 12.088Z"
+                                fill="#888B97" />
+                            <path
+                                d="M19.3636 9.07673C19.1679 8.881 18.8497 8.881 18.654 9.07673L17.6503 10.0804C17.4545 10.2762 17.4545 10.5944 17.6503 10.7901C17.7487 10.8874 17.8771 10.9366 18.0056 10.9366C18.1341 10.9366 18.2625 10.8875 18.3599 10.7901L19.3636 9.78637C19.5594 9.59065 19.5594 9.27245 19.3636 9.07673Z"
+                                fill="#888B97" />
+                        </svg>
+                        <span class="w-[145.50px] text-slate-700 text-base font-medium capitalize">2 Bathrooms</span>
+                    </div>
+                    <div class="flex gap-4 items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path
+                                d="M27.3838 10.6286L17.357 4.37929C16.5309 3.86917 15.4665 3.87438 14.6453 4.39024L4.60814 10.6338C3.98488 11.0255 3.81267 11.8251 4.22271 12.4197C4.63329 13.0144 5.47086 13.1792 6.09466 12.7869L16.0104 6.61852L25.9142 12.7922C26.1416 12.9325 26.3959 12.9987 26.6473 12.9987C27.0913 12.9987 27.5243 12.7916 27.7829 12.4109C28.1885 11.8131 28.0092 11.0161 27.3838 10.6286Z"
+                                fill="#888B97" />
+                            <path
+                                d="M24.2107 18.7531C24.134 18.3031 23.7525 17.9702 23.3075 17.9702H22.796L22.6017 15.8962C22.3942 13.6781 20.5985 12 18.4248 12H13.5761C11.4019 12 9.6067 13.6787 9.39866 15.8962L9.20484 17.9702H8.69287C8.24737 17.9702 7.86632 18.3031 7.78869 18.7531L7.02759 23.1768C6.93321 23.7251 7.08442 24.2895 7.43351 24.715C7.76941 25.1249 8.26412 25.3694 8.78167 25.3876V26.1221C8.78167 27.162 9.59452 28 10.6098 28H11.1872C12.2015 28 13.0266 27.162 13.0266 26.1221V25.3996H18.9794V26.1206C18.9794 27.1609 19.7978 28 20.8121 28H21.39C22.4043 28 23.2238 27.1609 23.2238 26.1206V25.3876C23.7413 25.3694 24.233 25.127 24.5679 24.7176C24.917 24.291 25.0661 23.7298 24.9728 23.1804L24.2107 18.7531ZM10.3906 23.6933C9.53465 23.6933 8.84052 22.9822 8.84052 22.1036C8.84052 21.225 9.53465 20.5134 10.3906 20.5134C11.2471 20.5134 11.9417 21.2245 11.9417 22.1036C11.9417 22.9822 11.2471 23.6933 10.3906 23.6933ZM10.7773 17.9702L10.9564 16.057C11.0868 14.666 12.2127 13.6183 13.5761 13.6183H13.8557V14.2196C13.8557 14.7414 14.2601 15.157 14.7685 15.157H17.2324C17.7408 15.157 18.1523 14.7414 18.1523 14.2196V13.6188H18.4248C19.7882 13.6188 20.9141 14.6665 21.044 16.0575L21.2236 17.9707L10.7773 17.9702ZM21.6082 23.6933C20.7522 23.6933 20.0581 22.9822 20.0581 22.1036C20.0581 21.225 20.7522 20.5134 21.6082 20.5134C22.4647 20.5134 23.1593 21.2245 23.1593 22.1036C23.1593 22.9822 22.4647 23.6933 21.6082 23.6933Z"
+                                fill="#888B97" />
+                        </svg>
+                        <span class="w-[145.50px] text-slate-700 text-base font-medium capitalize">1 Carport</span>
+                    </div>
+                    <div class="flex gap-4 items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none">
+                            <path
+                                d="M27.2884 9H22.9324C22.2631 9 21.7207 9.53666 21.7207 10.1996V13.3135H18.5759C17.9064 13.3135 17.3641 13.85 17.3641 14.5129V17.6271H14.2192C13.5497 17.6271 13.0075 18.1643 13.0075 18.8265V22.0907H9.71171C9.39012 22.0907 9.08195 22.2169 8.85482 22.4416C8.6275 22.6664 8.5 22.973 8.5 23.2901L8.50039 25.7999C8.50039 26.4634 9.04297 27 9.71206 27H27.2884C27.9579 27 28.5 26.4634 28.5 25.7999V10.1995C28.5001 9.53666 27.9579 9 27.2884 9Z"
+                                fill="#888B97" />
+                            <path
+                                d="M21.264 5.2453C20.9425 4.92389 20.4158 4.91771 20.0863 5.23043C14.7431 10.3055 9.65982 15.2624 4.74409 20.0549C4.58768 20.2074 4.5 20.4146 4.5 20.6296V26.1877C4.5 26.6356 4.87278 27 5.33294 27C5.79264 27 6.16608 26.6357 6.16608 26.1877V20.9657C11.002 16.2503 16.0017 11.378 21.2485 6.39368C21.5778 6.08102 21.5845 5.56652 21.264 5.2453Z"
+                                fill="#888B97" />
+                        </svg>
+                        <span class="w-[145.50px] text-slate-700 text-base font-medium capitalize">2 Floors</span>
+                    </div>
+                </div>
+                <div class="mt-8 w-full h-0.5 bg-indigo-50"></div>
+                <div class="mt-8 flex w-full items-center justify-between gap-4 xs:flex-col">
+                    <div class="flex gap-4 flex-grow">
+                        <img class="w-14 h-14" src="public/images/dude_1.png" alt="">
+                        <div class="flex flex-col gap-1">
+                            <span class="text-slate-900 text-lg font-medium leading-normal">Dianne Russell</span>
+                            <span class="text-neutral-400 text-base font-medium leading-normal">Manager Director</span>
+                        </div>
+                    </div>
+                    <div class="px-4 py-3 flex gap-4 rounded-[32px] bg-lightgreen justify-start items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M8.38439 2.47912C8.90949 2.3208 9.47298 2.34711 9.98104 2.55365C10.4891 2.7602 10.9111 3.13453 11.1768 3.61432L11.2668 3.79312L12.06 5.55832C12.3011 6.09411 12.3793 6.68894 12.285 7.26885C12.1907 7.84876 11.928 8.38814 11.5296 8.81992L11.3712 8.97832L10.1184 10.1459C9.8928 10.3595 10.062 11.1863 10.8792 12.5999C11.6124 13.8719 12.2112 14.4659 12.504 14.4983H12.5556L12.6192 14.4863L15.0792 13.7339C15.4098 13.6325 15.7626 13.6285 16.0955 13.7224C16.4283 13.8162 16.727 14.004 16.956 14.2631L17.0664 14.4011L18.6936 16.6571C19.0129 17.0992 19.1721 17.6368 19.1451 18.1814C19.118 18.7261 18.9063 19.2453 18.5448 19.6535L18.3984 19.8047L17.7468 20.4215C17.1627 20.9746 16.4322 21.3484 15.6419 21.4984C14.8516 21.6483 14.0349 21.5682 13.2888 21.2675C10.9668 20.3315 8.85719 18.1931 6.94079 14.8739C5.02079 11.5463 4.2228 8.64592 4.5792 6.16192C4.68715 5.41091 4.99653 4.70316 5.47446 4.11388C5.9524 3.52459 6.58104 3.07578 7.2936 2.81512L7.52519 2.73832L8.38439 2.47912Z"
+                                fill="white" />
+                        </svg>
+                        <span class="text-white text-sm font-semibold leading-snug">Contact Now</span>
+                    </div>
+
+                </div>
+            </div>
+            <div>
+                <img src="public/images/housespng.png" alt="" srcset="">
+            </div>
+        </div>
+    </section>
+    <!--section 3-->
+    <section class="mt-[120px] md:mt-[80px]">
+        <div class="max-w-[1920px] w-full">
+            <h2 class="text-center text-blue-950 text-[32px] font-semibold capitalize  px-10 sm:px-5">What Our User Say
+                About Us</h2>
+            <div class="js-flickity  mt-10" data-flickity-options='{"prevNextButtons": false, "initialIndex": 1 }'>
+                <div class="gallery-cell mr-12 h-[505px] sm:h-auto w-[740px] sm:w-full sm:px-5">
+                    <div class="flex flex-col h-full">
+                        <img src="public/images/section_3_1.png" alt="">
+                        <div
+                            class="mx-16 sm:mx-8 -mt-[140px] py-8 px-8 sm:py-4 sm:px-4 bg-white rounded-2xl shadow-3xl">
+                            <h4 class="max-w-[548px] text-blue-950 text-xl font-semibold capitalize">My house sold out
+                                fast!</h4>
+                            <p class="max-w-[548px] opacity-75 text-slate-500 text-sm font-normal leading-normal">
+                                I was finally able to sell my house quickly through Hounter by immediately setting me up
+                                with people who wanted my house. I also do not get a discount from the sale of my house.
+                                Awesome!</p>
+                            <div class="pt-6 flex justify-between">
+                                <div class="flex gap-4 flex-grow">
+                                    <img class="max-w-[43px] max-h-[43px]" src="public/images/dude_5.png" alt=""
+                                        srcset="">
+                                    <div class="flex flex-col gap-1 ">
+                                        <div class=" text-slate-900 text-sm font-medium  leading-snug">
+                                            Courtney Henry</div>
+                                        <div class=" text-neutral-400 text-sm font-medium  leading-snug">
+                                            CEO Andarafish</div>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4 self-end">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"
+                                        fill="none">
+                                        <path
+                                            d="M25.6048 10.7088C25.5315 10.4929 25.3965 10.3031 25.2166 10.1629C25.0366 10.0228 24.8196 9.93838 24.5922 9.92018L17.941 9.39168L15.0628 3.02052C14.9712 2.81531 14.8221 2.64103 14.6336 2.51868C14.445 2.39634 14.2251 2.33118 14.0004 2.33105C13.7756 2.33093 13.5557 2.39585 13.367 2.51799C13.1783 2.64012 13.0291 2.81425 12.9372 3.01935L10.059 9.39168L3.40784 9.92018C3.18437 9.93789 2.97074 10.0196 2.79249 10.1555C2.61424 10.2915 2.47894 10.4759 2.40275 10.6867C2.32657 10.8975 2.31274 11.1259 2.36291 11.3443C2.41309 11.5628 2.52514 11.7622 2.68568 11.9187L7.60084 16.7102L5.86251 24.2375C5.80973 24.4654 5.82664 24.7038 5.91107 24.9219C5.99549 25.14 6.14352 25.3278 6.33595 25.4607C6.52837 25.5936 6.75632 25.6657 6.99019 25.6674C7.22407 25.6692 7.45308 25.6007 7.64751 25.4707L14 21.2357L20.3525 25.4707C20.5512 25.6026 20.7856 25.6706 21.0241 25.6653C21.2626 25.6601 21.4937 25.582 21.6865 25.4414C21.8792 25.3009 22.0243 25.1047 22.1022 24.8793C22.1802 24.6538 22.1872 24.4099 22.1223 24.1803L19.9885 16.7137L25.2805 11.9514C25.627 11.6387 25.7542 11.151 25.6048 10.7088Z"
+                                            fill="#F59E0B" />
+                                    </svg>
+                                    <span class="text-slate-700 text-xl font-semibold leading-7">4.3</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-cell mr-12 h-[505px] sm:h-auto w-[740px] sm:w-full sm:px-5">
+                    <div class="flex flex-col h-full">
+                        <img src="public/images/section_3_2.png" alt="">
+                        <div
+                            class="mx-16 sm:mx-8 -mt-[140px] py-8 px-8 sm:py-4 sm:px-4 bg-white rounded-2xl shadow-3xl">
+                            <h4 class="max-w-[548px] text-blue-950 text-xl font-semibold capitalize">Best! I got the
+                                house I
+                                wanted through Hounter</h4>
+                            <p class="max-w-[548px] opacity-75 text-slate-500 text-sm font-normal leading-normal">
+                                Through this website I can get a house with the type and specifications I want very
+                                easily,
+                                without a complicated process to be able to find information on the house we want.</p>
+                            <div class="pt-6 flex justify-between">
+                                <div class="flex gap-4 flex-grow">
+                                    <img class="max-w-[43px] max-h-[43px]" src="public/images/dude_1.png" alt=""
+                                        srcset="">
+                                    <div class="flex flex-col gap-1 ">
+                                        <div class=" text-slate-900 text-sm font-medium  leading-snug">
+                                            Dianne Russell</div>
+                                        <div class=" text-neutral-400 text-sm font-medium  leading-snug">
+                                            Manager Director</div>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4 self-end">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"
+                                        fill="none">
+                                        <path
+                                            d="M25.6048 10.7088C25.5315 10.4929 25.3965 10.3031 25.2166 10.1629C25.0366 10.0228 24.8196 9.93838 24.5922 9.92018L17.941 9.39168L15.0628 3.02052C14.9712 2.81531 14.8221 2.64103 14.6336 2.51868C14.445 2.39634 14.2251 2.33118 14.0004 2.33105C13.7756 2.33093 13.5557 2.39585 13.367 2.51799C13.1783 2.64012 13.0291 2.81425 12.9372 3.01935L10.059 9.39168L3.40784 9.92018C3.18437 9.93789 2.97074 10.0196 2.79249 10.1555C2.61424 10.2915 2.47894 10.4759 2.40275 10.6867C2.32657 10.8975 2.31274 11.1259 2.36291 11.3443C2.41309 11.5628 2.52514 11.7622 2.68568 11.9187L7.60084 16.7102L5.86251 24.2375C5.80973 24.4654 5.82664 24.7038 5.91107 24.9219C5.99549 25.14 6.14352 25.3278 6.33595 25.4607C6.52837 25.5936 6.75632 25.6657 6.99019 25.6674C7.22407 25.6692 7.45308 25.6007 7.64751 25.4707L14 21.2357L20.3525 25.4707C20.5512 25.6026 20.7856 25.6706 21.0241 25.6653C21.2626 25.6601 21.4937 25.582 21.6865 25.4414C21.8792 25.3009 22.0243 25.1047 22.1022 24.8793C22.1802 24.6538 22.1872 24.4099 22.1223 24.1803L19.9885 16.7137L25.2805 11.9514C25.627 11.6387 25.7542 11.151 25.6048 10.7088Z"
+                                            fill="#F59E0B" />
+                                    </svg>
+                                    <span class="text-slate-700 text-xl font-semibold leading-7">4.6</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-cell  mr-12 h-[505px] sm:h-auto w-[740px] sm:w-full sm:px-5">
+                    <div class="flex flex-col h-full">
+                        <img src="public/images/section_3_3.png" alt="">
+                        <div
+                            class="mx-16 sm:mx-8 -mt-[140px] py-8 px-8 sm:py-4 sm:px-4 bg-white rounded-2xl shadow-3xl">
+                            <h4 class="max-w-[548px] text-blue-950 text-xl font-semibold capitalize">Through the
+                                Hounter, I can get a house for my self</h4>
+                            <p class="max-w-[548px] opacity-75 text-slate-500 text-sm font-normal leading-normal">
+                                By looking for information about what kind of house we want, we managed to get the house
+                                we wanted very quickly, and directly connected with the seller to be able to ask about
+                                the details, very helpful!</p>
+                            <div class="pt-6 flex justify-between">
+                                <div class="flex gap-4 flex-grow">
+                                    <img class="max-w-[43px] max-h-[43px]" src="public/images/dude_6.png" alt=""
+                                        srcset="">
+                                    <div class="flex flex-col gap-1 ">
+                                        <div class=" text-slate-900 text-sm font-medium  leading-snug">
+                                            Esther Howard</div>
+                                        <div class=" text-neutral-400 text-sm font-medium  leading-snug">
+                                            Head of Marketing</div>
+                                    </div>
+                                </div>
+                                <div class="flex gap-4 self-end">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"
+                                        fill="none">
+                                        <path
+                                            d="M25.6048 10.7088C25.5315 10.4929 25.3965 10.3031 25.2166 10.1629C25.0366 10.0228 24.8196 9.93838 24.5922 9.92018L17.941 9.39168L15.0628 3.02052C14.9712 2.81531 14.8221 2.64103 14.6336 2.51868C14.445 2.39634 14.2251 2.33118 14.0004 2.33105C13.7756 2.33093 13.5557 2.39585 13.367 2.51799C13.1783 2.64012 13.0291 2.81425 12.9372 3.01935L10.059 9.39168L3.40784 9.92018C3.18437 9.93789 2.97074 10.0196 2.79249 10.1555C2.61424 10.2915 2.47894 10.4759 2.40275 10.6867C2.32657 10.8975 2.31274 11.1259 2.36291 11.3443C2.41309 11.5628 2.52514 11.7622 2.68568 11.9187L7.60084 16.7102L5.86251 24.2375C5.80973 24.4654 5.82664 24.7038 5.91107 24.9219C5.99549 25.14 6.14352 25.3278 6.33595 25.4607C6.52837 25.5936 6.75632 25.6657 6.99019 25.6674C7.22407 25.6692 7.45308 25.6007 7.64751 25.4707L14 21.2357L20.3525 25.4707C20.5512 25.6026 20.7856 25.6706 21.0241 25.6653C21.2626 25.6601 21.4937 25.582 21.6865 25.4414C21.8792 25.3009 22.0243 25.1047 22.1022 24.8793C22.1802 24.6538 22.1872 24.4099 22.1223 24.1803L19.9885 16.7137L25.2805 11.9514C25.627 11.6387 25.7542 11.151 25.6048 10.7088Z"
+                                            fill="#F59E0B" />
+                                    </svg>
+                                    <span class="text-slate-700 text-xl font-semibold leading-7">4.6</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!--section 4-->
+    <section class="mt-[120px] relative md:mt-[80px]">
+        <img class="absolute -z-10 -top-[160px] left-0" src="public/images/blur_lightgreen.png" alt="">
+        <div class="w-[1200px] px-10 mx-auto lg:w-full sm:px-5 ">
+            <h2 class="text-center text-blue-950 text-[32px] font-semibold capitalize">Find out more about<br />selling
+                and buying
+                homes</h2>
+            <div class="text-center">
+                <span class="mx-auto inline-block mt-6 px-4 py-3  rounded-[32px] bg-lightgreen ">
+                    <span class="text-white text-sm font-semibold leading-snug">Contact Now</span>
+                </span>
+            </div>
+            <div class="mt-[42px] grid grid-cols-2 gap-6 md:grid-cols-1 md:gap-11 md:justify-items-center xs:gap-16">
+
+                <div class="flex flex-col gap-11 xs:gap-16">
+
+                    <div class="flex gap-8 xs:flex-col">
+                        <img src="public/images/section_4_1.png" alt="">
+                        <div class="flex flex-col justify-between">
+                            <div class="flex gap-4 items-center">
+                                <img src="public/images/dude_1.png" alt="">
+                                <span class="text-slate-700 text-sm font-normal leading-snug">Dianne Russell</span>
+                            </div>
+                            <p class="max-w-[340px] text-blue-950 text-lg font-medium capitalize leading-loose">
+                                The things we need to check when we want to buy a house</p>
+                            <div class="flex gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path
+                                        d="M11.99 2C6.47 2 2 6.48 2 12C2 17.52 6.47 22 11.99 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 11.99 2ZM16 16C15.9075 16.0927 15.7976 16.1663 15.6766 16.2164C15.5557 16.2666 15.426 16.2924 15.295 16.2924C15.164 16.2924 15.0343 16.2666 14.9134 16.2164C14.7924 16.1663 14.6825 16.0927 14.59 16L11.3 12.71C11.2055 12.6174 11.1303 12.5069 11.0788 12.3851C11.0273 12.2632 11.0005 12.1323 11 12V8C11 7.45 11.45 7 12 7C12.55 7 13 7.45 13 8V11.59L16 14.59C16.39 14.98 16.39 15.61 16 16Z"
+                                        fill="#888B97" />
+                                </svg>
+                                <span class="text-neutral-400 text-sm font-normal leading-normal">4 min read | 25 Apr
+                                    2021</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-8  xs:flex-col">
+                        <img src="public/images/section_4_2.png" alt="">
+                        <div class="flex flex-col justify-between">
+                            <div class="flex gap-4 items-center">
+                                <img src="public/images/dude_4.png" alt="">
+                                <span class="text-slate-700 text-sm font-normal leading-snug">Courtney Henry</span>
+                            </div>
+                            <p class="max-w-[340px] text-blue-950 text-lg font-medium capitalize leading-loose">
+                                7 Ways to distinguish the quality of the house we want to buy</p>
+                            <div class="flex gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path
+                                        d="M11.99 2C6.47 2 2 6.48 2 12C2 17.52 6.47 22 11.99 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 11.99 2ZM16 16C15.9075 16.0927 15.7976 16.1663 15.6766 16.2164C15.5557 16.2666 15.426 16.2924 15.295 16.2924C15.164 16.2924 15.0343 16.2666 14.9134 16.2164C14.7924 16.1663 14.6825 16.0927 14.59 16L11.3 12.71C11.2055 12.6174 11.1303 12.5069 11.0788 12.3851C11.0273 12.2632 11.0005 12.1323 11 12V8C11 7.45 11.45 7 12 7C12.55 7 13 7.45 13 8V11.59L16 14.59C16.39 14.98 16.39 15.61 16 16Z"
+                                        fill="#888B97" />
+                                </svg>
+                                <span class="text-neutral-400 text-sm font-normal leading-normal">6 min read | 24 Apr
+                                    2021</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-8  xs:flex-col">
+                        <img src="public/images/section_4_3.png" alt="">
+                        <div class="flex flex-col justify-between">
+                            <div class="flex gap-4 items-center">
+                                <img src="public/images/dude_3.png" alt="">
+                                <span class="text-slate-700 text-sm font-normal leading-snug">Darlene Robertson</span>
+                            </div>
+                            <p class="max-w-[340px] text-blue-950 text-lg font-medium capitalize leading-loose">
+                                The best way to know the quality of the house we want to buy</p>
+                            <div class="flex gap-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none">
+                                    <path
+                                        d="M11.99 2C6.47 2 2 6.48 2 12C2 17.52 6.47 22 11.99 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 11.99 2ZM16 16C15.9075 16.0927 15.7976 16.1663 15.6766 16.2164C15.5557 16.2666 15.426 16.2924 15.295 16.2924C15.164 16.2924 15.0343 16.2666 14.9134 16.2164C14.7924 16.1663 14.6825 16.0927 14.59 16L11.3 12.71C11.2055 12.6174 11.1303 12.5069 11.0788 12.3851C11.0273 12.2632 11.0005 12.1323 11 12V8C11 7.45 11.45 7 12 7C12.55 7 13 7.45 13 8V11.59L16 14.59C16.39 14.98 16.39 15.61 16 16Z"
+                                        fill="#888B97" />
+                                </svg>
+                                <span class="text-neutral-400 text-sm font-normal leading-normal">2 min read | 24 Apr
+                                    2021</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="flex flex-col md:flex-row   gap-8  xs:flex-col">
+                    <img class="md:max-w-[200px] md:max-h-[144px] self-center" src="public/images/section_4_4.png"
+                        alt="">
+                    <div class="flex flex-col justify-between gap-3 md:gap-0">
+                        <div class="flex gap-4 items-center">
+                            <img src="public/images/dude_2.png" alt="">
+                            <span class="text-slate-700 text-sm font-normal leading-snug">Cameron Williamson</span>
+                        </div>
+                        <h4 class=" text-blue-950 text-lg font-medium capitalize leading-loose md:max-w-[340px]">
+                            12 Things to know before buying a house</h4>
+                        <p class="opacity-75 text-slate-500 text-sm font-normal leading-normal md:hidden">
+                            Want to buy a house but are unsure about what we should know, here I will try to explain
+                            what we should know and check when we want to buy a house</p>
+                        <div class="flex gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none">
+                                <path
+                                    d="M11.99 2C6.47 2 2 6.48 2 12C2 17.52 6.47 22 11.99 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 11.99 2ZM16 16C15.9075 16.0927 15.7976 16.1663 15.6766 16.2164C15.5557 16.2666 15.426 16.2924 15.295 16.2924C15.164 16.2924 15.0343 16.2666 14.9134 16.2164C14.7924 16.1663 14.6825 16.0927 14.59 16L11.3 12.71C11.2055 12.6174 11.1303 12.5069 11.0788 12.3851C11.0273 12.2632 11.0005 12.1323 11 12V8C11 7.45 11.45 7 12 7C12.55 7 13 7.45 13 8V11.59L16 14.59C16.39 14.98 16.39 15.61 16 16Z"
+                                    fill="#888B97" />
+                            </svg>
+                            <span class="text-neutral-400 text-sm font-normal leading-normal">2 min read | 24 Apr
+                                2021</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </section>
+    <!--subscribe-->
+    <section class="mt-[120px] relative md:mt-[80px]">
+        <div class="px-10 mx-auto sm:px-5">
+            <div
+                class="w-[1200px] py-[65px] px-10 mx-auto relative lg:w-full sm:px-5 rounded-[32px] bg-[url('/public/images/footer_bg.png')] bg-cover flex flex-col gap-8 justify-center items-center">
+                <img class="absolute left-0 top-0 md:hidden" src="public/images/Subscribe_icons.png" alt="">
+                <h3 class="text-center text-blue-950 text-[32px] font-semibold capitalize leading-[48px]">Subscribe For
+                    More
+                    Info<br />and update from Hounter</h3>
+
+                <div
+                    class="p-1 pl-6 xs:pl-2 flex justify-between w-[496px] max-h-[58px] lg:w-[436px] sm:w-full  bg-white rounded-[32px] border border-zinc-200">
+                    <div class="flex gap-4 xs:gap-1 items-center">
+                        <svg class="xs:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M19 4H5C4.20435 4 3.44129 4.31607 2.87868 4.87868C2.31607 5.44129 2 6.20435 2 7V17C2 17.7956 2.31607 18.5587 2.87868 19.1213C3.44129 19.6839 4.20435 20 5 20H19C19.7956 20 20.5587 19.6839 21.1213 19.1213C21.6839 18.5587 22 17.7956 22 17V7C22 6.20435 21.6839 5.44129 21.1213 4.87868C20.5587 4.31607 19.7956 4 19 4ZM19 6L12.5 10.47C12.348 10.5578 12.1755 10.604 12 10.604C11.8245 10.604 11.652 10.5578 11.5 10.47L5 6H19Z"
+                                fill="#3B82F6" />
+                        </svg>
+                        <input class="border-none xs:max-w-[140px]" type="text" placeholder="Your email here">
+                    </div>
+                    <a href="" class="items-center justify-center rounded-[32px] bg-lightgreen px-4 py-3 xs:px-2">
+                        <span class="text-[14px] text-white font-semibold leading-[22px]">Subscribe Now</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="py-[120px] md:py-[80px] relative">
+        <img class="absolute -z-10 bottom-0 right-0 w-full h-full" src="public/images/blur_lightgreen_footer.png" alt="">
+        <div class="w-[1200px] px-10 mx-auto lg:w-full sm:px-5">
+            <div class="flex justify-between gap-4 sm:flex-col sm:gap-8">
+                <div>
+                    <div class="flex gap-3 items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+                            <path
+                                d="M0 4C0 1.79086 1.79086 0 4 0H28C30.2091 0 32 1.79086 32 4V8C32 21.2548 21.2548 32 8 32H4C1.79086 32 0 30.2091 0 28V4Z"
+                                fill="#F59E0B" />
+                            <path
+                                d="M4 8C4 5.79086 5.79086 4 8 4H32C34.2091 4 36 5.79086 36 8V12C36 25.2548 25.2548 36 12 36H8C5.79086 36 4 34.2091 4 32V8Z"
+                                fill="#4BE4C9" />
+                        </svg>
+                        <a href="" class="text-base font-bold text-darkblue">Hounter</a>
+                    </div>
+                    <div class="pt-4 max-w-[320px] opacity-75 text-slate-500 text-sm font-normal leading-normal">We
+                        provide information about properties such as houses, villas and apartments to help people find
+                        their dream home
+                    </div>
+                    <div class="mt-6 flex gap-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path
+                                d="M12.3186 26V16.6154H9V13.2365H12.3186V10.3505C12.3186 8.08264 14.2789 6 18.7959 6C20.6247 6 21.9771 6.1311 21.9771 6.1311L21.8705 9.28642C21.8705 9.28642 20.4913 9.27638 18.9863 9.27638C17.3574 9.27638 17.0965 9.83768 17.0965 10.7693V13.2365H22L21.7866 16.6154H17.0965V26H12.3186Z"
+                                fill="#3C4563" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path
+                                d="M28 8.37575C27.1174 8.76628 26.157 9.04735 25.1676 9.15682C26.1948 8.53089 26.9639 7.54202 27.3308 6.37575C26.367 6.96388 25.3111 7.37629 24.2101 7.59469C23.7499 7.09003 23.1933 6.688 22.575 6.41364C21.9567 6.13929 21.2899 5.99849 20.6163 6.00001C17.8906 6.00001 15.6986 8.26628 15.6986 11.0473C15.6986 11.4379 15.7447 11.8284 15.8197 12.2042C11.7385 11.9852 8.09855 9.98522 5.67864 6.92309C5.23771 7.69562 5.00665 8.57524 5.00949 9.47042C5.00949 11.2219 5.87766 12.7663 7.20154 13.6746C6.42136 13.643 5.65944 13.4231 4.97777 13.0326V13.0947C4.97777 15.5473 6.66795 17.5799 8.92056 18.0473C8.49761 18.16 8.06251 18.2177 7.62553 18.2189C7.30537 18.2189 7.00252 18.1864 6.69679 18.142C7.31979 20.142 9.134 21.5947 11.2943 21.642C9.60413 23 7.48708 23.7988 5.18832 23.7988C4.77587 23.7988 4.39514 23.784 4 23.7367C6.18051 25.1716 8.7677 26 11.5539 26C20.599 26 25.5484 18.3136 25.5484 11.642C25.5484 11.4231 25.5484 11.2042 25.534 10.9852C26.4915 10.2663 27.3308 9.37575 28 8.37575Z"
+                                fill="#3C4563" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path
+                                d="M15.9973 12.6652C14.1611 12.6652 12.6626 14.1638 12.6626 16C12.6626 17.8362 14.1611 19.3348 15.9973 19.3348C17.8335 19.3348 19.332 17.8362 19.332 16C19.332 14.1638 17.8335 12.6652 15.9973 12.6652ZM25.9989 16C25.9989 14.6191 26.0114 13.2506 25.9338 11.8722C25.8563 10.2711 25.4911 8.85017 24.3203 7.67938C23.147 6.50609 21.7286 6.14334 20.1275 6.06579C18.7466 5.98824 17.3782 6.00074 15.9998 6.00074C14.6189 6.00074 13.2505 5.98824 11.8721 6.06579C10.271 6.14334 8.85012 6.50859 7.67935 7.67938C6.50608 8.85267 6.14334 10.2711 6.06579 11.8722C5.98824 13.2531 6.00074 14.6216 6.00074 16C6.00074 17.3784 5.98824 18.7494 6.06579 20.1278C6.14334 21.7289 6.50858 23.1498 7.67935 24.3206C8.85262 25.4939 10.271 25.8567 11.8721 25.9342C13.253 26.0118 14.6214 25.9993 15.9998 25.9993C17.3807 25.9993 18.7491 26.0118 20.1275 25.9342C21.7286 25.8567 23.1495 25.4914 24.3203 24.3206C25.4936 23.1473 25.8563 21.7289 25.9338 20.1278C26.0139 18.7494 25.9989 17.3809 25.9989 16ZM15.9973 21.131C13.1579 21.131 10.8664 18.8394 10.8664 16C10.8664 13.1606 13.1579 10.869 15.9973 10.869C18.8367 10.869 21.1282 13.1606 21.1282 16C21.1282 18.8394 18.8367 21.131 15.9973 21.131ZM21.3383 11.8572C20.6754 11.8572 20.14 11.3218 20.14 10.6589C20.14 9.99594 20.6754 9.46058 21.3383 9.46058C22.0013 9.46058 22.5366 9.99594 22.5366 10.6589C22.5368 10.8163 22.5059 10.9722 22.4458 11.1177C22.3856 11.2632 22.2974 11.3954 22.1861 11.5067C22.0748 11.618 21.9426 11.7062 21.7971 11.7664C21.6516 11.8265 21.4957 11.8574 21.3383 11.8572Z"
+                                fill="#3C4563" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="flex gap-[88px] md:gap-10">
+                    <div class="flex flex-col gap-[18px] sm:gap-3">
+                        <div class="mb-[6px] text-slate-900 text-lg font-semibold capitalize">Property</div>
+                        <div class="text-neutral-400 text-sm font-normal capitalize">House</div>
+                        <div class="text-neutral-400 text-sm font-normal capitalize">Apartment</div>
+                        <div class="text-neutral-400 text-sm font-normal capitalize">Villa</div>
+                    </div>
+
+                    <div class="flex flex-col gap-[18px] sm:gap-3">
+                        <div class="mb-[6px] text-slate-900 text-lg font-semibold capitalize">Article</div>
+                        <div class="text-neutral-400 text-sm font-normal capitalize">New Article</div>
+                        <div class="text-neutral-400 text-sm font-normal capitalize">Popular Article</div>
+                        <div class="text-neutral-400 text-sm font-normal capitalize">Most Read</div>
+                    </div>
+
+                    <div class="flex flex-col gap-[18px] sm:gap-3">
+                        <div class="mb-[6px] text-slate-900 text-lg font-semibold capitalize">Contact</div>
+                        <div class="text-neutral-400 text-sm font-normal capitalize">2464 Royal Ln. Mesa, New Jersey 45463</div>
+                        <div class="text-neutral-400 text-sm font-normal capitalize">(671) 555-0110</div>
+                        <div class="text-neutral-400 text-sm font-normal capitalize">info@hounter.com</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+    </footer>
+    <script src="public/main.js"></script>
+</body>
+
+</html>
