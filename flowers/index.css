@@ -128,10 +128,6 @@
 .mainscreen_image {
     width: 461px;
     height: 545px;
-    background-image: url("assets/images/mainscreen_image.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
 }
 
 .catalog_title {
