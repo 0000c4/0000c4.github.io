@@ -4,5 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&display=swap');
 
 @layer components {
-
+    .green_button{
+        @apply text-white fill-white bg-lightgreen hover:bg-[#D1FAE5] hover:text-lightgreen hover:fill-lightgreen transition-all
+    }
 }
