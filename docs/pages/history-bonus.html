@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+<!-- Favicon icon-->
+<link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon/favicon.ico">
+
+<!-- Libs CSS -->
+
+
+<link href="../assets/libs/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<link href="../assets/libs/dropzone/dist/dropzone.css"  rel="stylesheet">
+<link href="../assets/libs/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet" />
+<link href="../assets/libs/prismjs/themes/prism-okaidia.css" rel="stylesheet">
+
+<link rel="stylesheet" href="../assets/css/theme.min.css">
+
+<!-- Theme CSS -->
+<link rel="stylesheet" href="../assets/css/theme.min.css">
+    <title>История</title>
+  </head>
+
+  <body class="bg-light">
+    <!-- <div id="db-wrapper"> -->
+      <!-- navbar vertical  -->
+      
+      <!-- page content  -->
+      <!-- <div id="page-content"> -->
+        <div class="position-relative">
+  <nav class="navbar navbar-dark bg-primary py-2">
+    <div class="container-fluid d-flex">
+      <button class="navbar-toggler mt-2 me-3 rounded bg-light p-1"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar">
+        <i class="bi bi-text-indent-left fs-2 text-dark"></i>
+      </button>
+      <button type="button" class="btn btn-light p-2 mt-2">
+        <i class="bi bi-eye"></i>
+        Профиль пригласителя
+      </button>
+      <!--Navbar nav -->
+      <ul
+        class=" ms-auto d-flex align-items-center
+        nav-top-wrap gap-3 hstack mt-2 list-unstyled">
+        <li class="dropdown">
+          <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Выбрать язык
+         </button>
+          <div
+            class="dropdown-menu dropdown-menu-end dropdown ms-2"
+            aria-labelledby="dropdownLang">
+            <ul class="select-language d-flex flex-column list-unstyled">
+              <li class="language__img mb-2" data-google-lang="ru">
+                <img
+                  class="ms-7"
+                  src="../assets/images/flag-icon/free-icon-russia-5315463.png"
+                  alt="RUS"
+                  data-google-lang="ru"
+                  />
+                <a href="#"> Русский </a>
+              </li>
+              <li class="language__img mb-2" data-google-lang="en">
+                <img
+                  class="ms-7"
+                  src="../assets/images/flag-icon/free-icon-united-kingdom-197374.png"
+                  alt="EN"
+                  data-google-lang="en"
+                  />
+                <a href="#"> Английский </a>
+              </li>
+              <li class="language__img mb-2" data-google-lang="de">
+                <img
+                  class="ms-7"
+                  src="../assets/images/flag-icon/free-icon-germany-5315745.png"
+                  alt="DE"
+                  data-google-lang="de"
+                  />
+                <a href="#"> Немецкий </a>
+              </li>
+              <li class="language__img mb-2" data-google-lang="fr">
+                <img
+                  class="ms-7"
+                  src="../assets/images/flag-icon/free-icon-france-197560.png"
+                  alt="FR"
+                  data-google-lang="fr"
+                  />
+                <a href="#"> Французский </a>
+              </li>
+              <li class="language__img mb-2" data-google-lang="cn">
+                <img
+                  class="ms-7"
+                  src="../assets/images/flag-icon/china.png"
+                  alt="CN"
+                  data-google-lang="cn"
+                  />
+                <a href="#"> Китайский </a>
+              </li>
+              <li class="language__img mb-2" data-google-lang="es">
+                <img
+                  class="ms-7"
+                  src="../assets/images/flag-icon/spain.png"
+                  alt="ES"
+                  data-google-lang="es"
+                  />
+                <a href="#"> Испансикй </a>
+              </li>
+              <li class="language__img mb-2" data-google-lang="ar">
+                <img
+                  class="ms-7"
+                  src="../assets/images/flag-icon/argentina.png"
+                  alt="AR"
+                  data-google-lang="ar"
+                  />
+                <a href="#"> Аргентинский </a>
+              </li>
+              <li class="language__img mb-2" data-google-lang="pt">
+                <img
+                  class="ms-7"
+                  src="../assets/images/flag-icon/portugal.png"
+                  alt="PT"
+                  data-google-lang="pt"
+                  />
+                <a href="#"> Португальский </a>
+              </li>
+              <li class="language__img mb-2" data-google-lang="hi">
+                <img
+                  class="ms-7"
+                  src="../assets/images/flag-icon/india.png"
+                  alt="HI"
+                  data-google-lang="hi"
+                  />
+                <a href="#"> Хинди </a>
+              </li>
+              <li class="language__img " data-google-lang="tr">
+                <img
+                  class="ms-7"
+                  src="../assets/images/flag-icon/turkey.png"
+                  alt="TR"
+                  data-google-lang="tr"
+                  />
+                <a href="#"> Турецкий </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- Socials  -->
+        <li class="card ms-auto">
+          <div class="card-body p-2">
+            <ul class="list-unstyled hstack gap-3">
+              <li>
+                <a href="#" title="Chanel">
+                  <img src="../assets/images/socials/tg.png" alt="" />
+                </a>
+              </li>
+              <li>
+                <a href="#" title="Support">
+                  <img src="../assets/images/socials/tg.png" alt="" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- Account -->
+        <li class="dropdown ms-2">
+          <a
+            class="rounded-circle"
+            href="#"
+            role="button"
+            id="dropdownUser"
+            data-bs-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false">
+            <div class="avatar avatar-md avatar-indicators avatar-online">
+              <img
+                alt="avatar"
+                src="../assets/images/avatar/avatar-1.jpg"
+                class="rounded-circle"
+                />
+            </div>
+          </a>
+          <div
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="dropdownUser">
+            <div class="px-4 pb-0 pt-2">
+              <div class="lh-1">
+                <h5 class="mb-1">Джон Э. Гейнджер</h5>
+              </div>
+              <div class="dropdown-divider mt-3 mb-2"></div>
+            </div>
+            <ul class="list-unstyled">
+              <li class="">
+                <a class="dropdown-item" href="../pages/profile.html">
+                  <i
+                    class="me-2 icon-xxs dropdown-item-icon"
+                    data-feather="user"></i>Мой профиль
+                </a>
+              </li>
+              <li class="">
+                <a class="dropdown-item" href="../pages/settings.html">
+                  <i
+                    class="me-2 icon-xxs dropdown-item-icon"
+                    data-feather="settings"></i>Настройки профиля
+                </a>
+              </li>
+              <li class="">
+                <a class="dropdown-item"
+                  href="../pages/payment-details.html">
+                  <i
+                    class="me-2 icon-xxs dropdown-item-icon"
+                    data-feather="briefcase"></i>Платежные реквизиты
+                </a>
+              </li>
+              <li class="">
+                <a class="dropdown-item" href="../pages/sign-in.html">
+                  <i
+                    class="me-2 icon-xxs dropdown-item-icon"
+                    data-feather="power"></i>Выход
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <div class="offcanvas offcanvas-start bg-gray-800 p-4"
+        tabindex="-1" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel "
+        style="max-width: 300px">
+        <div class="offcanvas-header py-0">
+          <!-- Brand logo -->
+          <a class="navbar-brand" href="../index.html">
+            <img src="../assets/images/brand/logo/logo.svg" alt="" />
+          </a>
+          <button type="button" class="btn-close
+            text-reset text-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"> </button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav flex-column" id="sideNavbar">
+            <li class="nav-item">
+              <a
+                class="nav-link has-arrow "
+                href="../index.html">
+                <i class="bi bi-house me-2"></i>
+                Панель
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link has-arrow "
+                href="../pages/deposit.html">
+                <i class="bi bi-safe2 me-2"></i>
+                Депозит
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link has-arrow "
+                href="../pages/withdrawal-of-funds.html">
+                <i class="bi bi-cash-coin me-2"></i>
+                Вывод средств
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link has-arrow "
+                href="../pages/partners.html">
+                <i class="bi bi-people me-2"></i>
+                Партнерам
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link has-arrow  active "
+                href="../pages/history-all.html">
+                <i class="bi bi-clock-history me-2"></i>
+                История
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link has-arrow "
+                href="../reviews.html">
+                <i class="bi bi-chat-left-heart me-2"></i>
+                Отзывы
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link has-arrow "
+                href="../pages/faq.html">
+                <i class="bi bi-question-octagon me-2"></i>
+                FAQ
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<!-- Navbar
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+    data-bs-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false"
+    aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+          role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1"
+          aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control me-sm-2" type="search" placeholder="Search"
+        aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav> -->
+        <!-- Container fluid -->
+        <div class="container-fluid p-6">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+              <!-- Page header -->
+              <div class="border-bottom pb-4 mb-4">
+                <h3 class="mb-0 fw-bold">История операций</h3>
+              </div>
+            </div>
+          </div>
+          <!-- row  -->
+          <div class="row mt-0 d-flex justify-content-center">
+            <div class="col-xl-10 col-xl-12 col-lg-12 col-md-12 col-12">
+              <div class="container">
+                <div class="row">
+                  <div class="card mb-6">
+                    <div class="card-body">
+                      <!-- nav -->
+                      <ul
+                        class="nav nav-lt-tab nav nav-pills px-4 d-flex
+                        justify-content-center">
+                        <li class="nav-item">
+                          <a
+                            class="nav-link pb-0 "
+                            href="../pages/history-all.html"
+                            aria-selected="false">Все операции</a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link pb-0"
+                            href="../pages/history-refill.html"
+                            aria-selected="false">Пополнение</a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link pb-0"
+                            href="../pages/history-reserve.html"
+                            aria-selected="true">Вывод</a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link pb-0 active"
+                            href="../pages/history-bonus.html"
+                            aria-selected="false">Бонусы</a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link pb-0"
+                            href="../pages/history-await.html"
+                            aria-selected="false">В ожидании</a>
+                        </li>
+                        <li class="nav-item">
+                          <a
+                            class="nav-link pb-0"
+                            href="../pages/history-cancel.html"
+                            aria-selected="false">Отклонены</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="card px-0">
+                    <!-- content -->
+                      <div
+                        class="tab-pane fade show active">
+                        <!-- table  -->
+                        <div class="table-responsive">
+                          <table class="table text-nowrap mb-0">
+                            <thead class="">
+                              <tr>
+                                <th>Название операции</th>
+                                <th>Сумма</th>
+                                <th>Статус</th>
+                                <th>Номер операции</th>
+                              </tr>
+                            </thead>
+                            <tbody id="list-1">
+                              <tr>
+                                <td class="align-middle">
+                                  <div class="d-flex align-items-center">
+                                    <img
+                                      width="32"
+                                      height="32"
+                                      src="../assets/images/icon/expense.png"
+                                      />
+                                    <div class="ms-3 lh-1">
+                                      <h5 class="mb-1">
+                                        Вывод
+                                      </h5>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td class="align-middle">34</td>
+                                <td class="align-middle">
+                                  <span class="badge bg-warning">В ожидании</span>
+                                </td>
+                                <td class="align-middle">15</td>
+                              </tr>
+                              <tr>
+                                <td class="align-middle">
+                                  <div class="d-flex align-items-center">
+                                    <img
+                                      width="32"
+                                      height="32"
+                                      src="../assets/images/icon/income.png"
+                                      />
+                                    <div class="ms-3 lh-1">
+                                      <h5 class="mb-1">
+                                        Пополнение депозита
+                                      </h5>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td class="align-middle">47</td>
+                                <td class="align-middle">
+                                  <span class="badge bg-danger">Отменен</span>
+                                </td>
+                                <td class="align-middle">35</td>
+                              </tr>
+                              <tr>
+                                <td class="align-middle">
+                                  <div class="d-flex align-items-center">
+                                    <img
+                                      width="32"
+                                      height="32"
+                                      src="../assets/images/icon/suitcase.png"
+                                      />
+                                    <div class="ms-3 lh-1">
+                                      <h5 class="mb-1">
+                                        Создание депозита
+                                      </h5>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td class="align-middle">120</td>
+                                <td class="align-middle">
+                                  <span class="badge bg-info">Подготовлен</span>
+                                </td>
+                                <td class="align-middle">75</td>
+                              </tr>
+                              <tr>
+                                <td class="align-middle">
+                                  <div class="d-flex align-items-center">
+                                    <img
+                                      width="32"
+                                      height="32"
+                                      src="../assets/images/icon/cash.png"
+                                      />
+                                    <div class="ms-3 lh-1">
+                                      <h5 class="mb-1">
+                                        Реферальное вознаграждение
+                                      </h5>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td class="align-middle">89</td>
+                                <td class="align-middle">
+                                  <span class="badge bg-warning">В ожидании</span>
+                                </td>
+                                <td class="align-middle">63</td>
+                              </tr>
+                              <tr>
+                                <td class="align-middle">
+                                  <div class="d-flex align-items-center">
+                                    <img
+                                      width="32"
+                                      height="32"
+                                      src="../assets/images/icon/expense.png"
+                                      />
+                                    <div class="ms-3 lh-1">
+                                      <h5 class="mb-1">
+                                        Вывод
+                                      </h5>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td class="align-middle">108</td>
+                                <td class="align-middle">
+                                  <span class="badge bg-success">Завершён</span>
+                                </td>
+                                <td class="align-middle">100</td>
+                              </tr>
+                              <tr>
+                                <td class="align-middle border-bottom-0">
+                                  <div class="d-flex align-items-center">
+                                    <img
+                                      width="32"
+                                      height="32"
+                                      src="../assets/images/icon/suitcase.png"
+                                      />
+                                    <div class="ms-3 lh-1">
+                                      <h5 class="mb-1">
+                                        Создание депозита
+                                      </h5>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td class="align-middle border-bottom-0">120</td>
+                                <td class="align-middle border-bottom-0">
+                                  <span class="badge bg-info">Подготовлен</span>
+                                </td>
+                                <td class="align-middle">100</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="card-footer bg-white text-center">
+                        <button class="btn btn-link btn-watch-all" data-isopen="true" data-watchall='#list-1'>Весь список</button>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Scripts -->
+    <!-- Libs JS -->
+<script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+<script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/libs/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="../assets/libs/feather-icons/dist/feather.min.js"></script>
+<script src="../assets/libs/prismjs/prism.js"></script>
+<script src="../assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+<script src="../assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+<script src="../assets/libs/prismjs/plugins/toolbar/prism-toolbar.min.js"></script>
+<script src="../assets/libs/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+
+
+<!-- Google Translate -->
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+
+
+<script src="../assets/js/theme.min.js"></script>
+
+<!-- Theme JS -->
+<script src="../assets/js/theme.min.js"></script>
+
+<script>
+  new ClipboardJS('.copy_link');
+</script>
+  </body>
+</html>

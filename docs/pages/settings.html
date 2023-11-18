@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+<!-- Favicon icon-->
+<link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon/favicon.ico">
+
+<!-- Libs CSS -->
+
+
+<link href="../assets/libs/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<link href="../assets/libs/dropzone/dist/dropzone.css"  rel="stylesheet">
+<link href="../assets/libs/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet" />
+<link href="../assets/libs/prismjs/themes/prism-okaidia.css" rel="stylesheet">
+
+<link rel="stylesheet" href="../assets/css/theme.min.css">
+
+<!-- Theme CSS -->
+<link rel="stylesheet" href="../assets/css/theme.min.css">
+    <title>Настройки</title>
+  </head>
+
+  <body class="bg-light">
+    <!-- <div id="db-wrapper"> -->
+      <!-- navbar vertical -->
+      
+      <!-- page content -->
+      <!-- <div id="page-content"> -->
+        <div class="position-relative">
+  <nav class="navbar navbar-dark bg-primary py-2">
+    <div class="container-fluid d-flex">
+      <button class="navbar-toggler mt-2 me-3 rounded bg-light p-1"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar">
+        <i class="bi bi-text-indent-left fs-2 text-dark"></i>
+      </button>
+      <button type="button" class="btn btn-light p-2 mt-2">
+        <i class="bi bi-eye"></i>
+        Профиль пригласителя
+      </button>
+      <!--Navbar nav -->
+      <ul
+        class=" ms-auto d-flex align-items-center
+        nav-top-wrap gap-3 hstack mt-2 list-unstyled">
+        <li class="dropdown">
+          <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Выбрать язык
+         </button>
+          <div
+            class="dropdown-menu dropdown-menu-end dropdown ms-2"
+            aria-labelledby="dropdownLang">
+            <ul class="select-language d-flex flex-column list-unstyled">
+              <li class="language__img mb-2" data-google-lang="ru">
+                <img
+                  class="ms-7"
+                  src="../assets/images/flag-icon/free-icon-russia-5315463.png"
+                  alt="RUS"
+                  data-google-lang="ru"
+                  />
+                <a href="#"> Русский </a>
+              </li>
+              <li class="language__img mb-2" data-google-lang="en">
+                <img
+                  class="ms-7"
+                  src="../assets/images/flag-icon/free-icon-united-kingdom-197374.png"
+                  alt="EN"
+                  data-google-lang="en"
+                  />
+                <a href="#"> Английский </a>
+              </li>
+              <li class="language__img mb-2" data-google-lang="de">
+                <img
+                  class="ms-7"
+                  src="../assets/images/flag-icon/free-icon-germany-5315745.png"
+                  alt="DE"
+                  data-google-lang="de"
+                  />
+                <a href="#"> Немецкий </a>
+              </li>
+              <li class="language__img mb-2" data-google-lang="fr">
+                <img
+                  class="ms-7"
+                  src="../assets/images/flag-icon/free-icon-france-197560.png"
+                  alt="FR"
+                  data-google-lang="fr"
+                  />
+                <a href="#"> Французский </a>
+              </li>
+              <li class="language__img mb-2" data-google-lang="cn">
+                <img
+                  class="ms-7"
+                  src="../assets/images/flag-icon/china.png"
+                  alt="CN"
+                  data-google-lang="cn"
+                  />
+                <a href="#"> Китайский </a>
+              </li>
+              <li class="language__img mb-2" data-google-lang="es">
+                <img
+                  class="ms-7"
+                  src="../assets/images/flag-icon/spain.png"
+                  alt="ES"
+                  data-google-lang="es"
+                  />
+                <a href="#"> Испансикй </a>
+              </li>
+              <li class="language__img mb-2" data-google-lang="ar">
+                <img
+                  class="ms-7"
+                  src="../assets/images/flag-icon/argentina.png"
+                  alt="AR"
+                  data-google-lang="ar"
+                  />
+                <a href="#"> Аргентинский </a>
+              </li>
+              <li class="language__img mb-2" data-google-lang="pt">
+                <img
+                  class="ms-7"
+                  src="../assets/images/flag-icon/portugal.png"
+                  alt="PT"
+                  data-google-lang="pt"
+                  />
+                <a href="#"> Португальский </a>
+              </li>
+              <li class="language__img mb-2" data-google-lang="hi">
+                <img
+                  class="ms-7"
+                  src="../assets/images/flag-icon/india.png"
+                  alt="HI"
+                  data-google-lang="hi"
+                  />
+                <a href="#"> Хинди </a>
+              </li>
+              <li class="language__img " data-google-lang="tr">
+                <img
+                  class="ms-7"
+                  src="../assets/images/flag-icon/turkey.png"
+                  alt="TR"
+                  data-google-lang="tr"
+                  />
+                <a href="#"> Турецкий </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- Socials  -->
+        <li class="card ms-auto">
+          <div class="card-body p-2">
+            <ul class="list-unstyled hstack gap-3">
+              <li>
+                <a href="#" title="Chanel">
+                  <img src="../assets/images/socials/tg.png" alt="" />
+                </a>
+              </li>
+              <li>
+                <a href="#" title="Support">
+                  <img src="../assets/images/socials/tg.png" alt="" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- Account -->
+        <li class="dropdown ms-2">
+          <a
+            class="rounded-circle"
+            href="#"
+            role="button"
+            id="dropdownUser"
+            data-bs-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false">
+            <div class="avatar avatar-md avatar-indicators avatar-online">
+              <img
+                alt="avatar"
+                src="../assets/images/avatar/avatar-1.jpg"
+                class="rounded-circle"
+                />
+            </div>
+          </a>
+          <div
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="dropdownUser">
+            <div class="px-4 pb-0 pt-2">
+              <div class="lh-1">
+                <h5 class="mb-1">Джон Э. Гейнджер</h5>
+              </div>
+              <div class="dropdown-divider mt-3 mb-2"></div>
+            </div>
+            <ul class="list-unstyled">
+              <li class="">
+                <a class="dropdown-item" href="../pages/profile.html">
+                  <i
+                    class="me-2 icon-xxs dropdown-item-icon"
+                    data-feather="user"></i>Мой профиль
+                </a>
+              </li>
+              <li class="">
+                <a class="dropdown-item" href="../pages/settings.html">
+                  <i
+                    class="me-2 icon-xxs dropdown-item-icon"
+                    data-feather="settings"></i>Настройки профиля
+                </a>
+              </li>
+              <li class="">
+                <a class="dropdown-item"
+                  href="../pages/payment-details.html">
+                  <i
+                    class="me-2 icon-xxs dropdown-item-icon"
+                    data-feather="briefcase"></i>Платежные реквизиты
+                </a>
+              </li>
+              <li class="">
+                <a class="dropdown-item" href="../pages/sign-in.html">
+                  <i
+                    class="me-2 icon-xxs dropdown-item-icon"
+                    data-feather="power"></i>Выход
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <div class="offcanvas offcanvas-start bg-gray-800 p-4"
+        tabindex="-1" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel "
+        style="max-width: 300px">
+        <div class="offcanvas-header py-0">
+          <!-- Brand logo -->
+          <a class="navbar-brand" href="../index.html">
+            <img src="../assets/images/brand/logo/logo.svg" alt="" />
+          </a>
+          <button type="button" class="btn-close
+            text-reset text-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"> </button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav flex-column" id="sideNavbar">
+            <li class="nav-item">
+              <a
+                class="nav-link has-arrow "
+                href="../index.html">
+                <i class="bi bi-house me-2"></i>
+                Панель
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link has-arrow "
+                href="../pages/deposit.html">
+                <i class="bi bi-safe2 me-2"></i>
+                Депозит
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link has-arrow "
+                href="../pages/withdrawal-of-funds.html">
+                <i class="bi bi-cash-coin me-2"></i>
+                Вывод средств
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link has-arrow "
+                href="../pages/partners.html">
+                <i class="bi bi-people me-2"></i>
+                Партнерам
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link has-arrow "
+                href="../pages/history-all.html">
+                <i class="bi bi-clock-history me-2"></i>
+                История
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link has-arrow "
+                href="../reviews.html">
+                <i class="bi bi-chat-left-heart me-2"></i>
+                Отзывы
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link has-arrow "
+                href="../pages/faq.html">
+                <i class="bi bi-question-octagon me-2"></i>
+                FAQ
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<!-- Navbar
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+    data-bs-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false"
+    aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+          role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1"
+          aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control me-sm-2" type="search" placeholder="Search"
+        aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav> -->
+        <!-- Container fluid -->
+        <div class="container-fluid p-6">
+          <div class="container">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+              <!-- Page header -->
+
+              <div class="border-bottom pb-4 mb-4">
+                <h3 class="mb-0 fw-bold">Настройки</h3>
+
+              </div>
+
+            </div>
+          </div>
+          <div class="row mb-8">
+            <div class="col-xl-3 col-lg-4 col-md-12 col-12">
+              <div class="mb-4 mb-lg-0">
+                <h4 class="mb-1">Настройки профиля</h4>
+              </div>
+
+            </div>
+
+            <div class="col-xl-9 col-lg-8 col-md-12 col-12">
+              <!-- card -->
+              <div class="card">
+                <!-- card body -->
+                <div class="card-body">
+                  <div class=" mb-6">
+                    <h4 class="mb-1">Настройки профиля</h4>
+
+                  </div>
+                  <div class="row align-items-center mb-8">
+                    <div class="col-md-3 mb-3 mb-md-0">
+                      <h5 class="mb-0">Аватар</h5>
+                    </div>
+                    <div class="col-md-9">
+                      <div class="d-flex align-items-center">
+                        <div class="me-3">
+                          <img src="../assets/images/avatar/avatar-5.jpg"
+                            class="rounded-circle avatar avatar-lg" alt="">
+                        </div>
+                        <div>
+                          <button type="submit" class="btn btn-outline-white
+                            me-1">Изменить</button>
+                          <button type="submit" class="btn btn-outline-white">Удалить</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- col -->
+                  <div class="row mb-8">
+                    <div class="col-md-3 mb-3 mb-md-0">
+                      <!-- heading -->
+                      <h5 class="mb-0">Обо мне</h5>
+                    </div>
+                    <div class="col-md-9">
+                      <!-- dropzone input -->
+                      <div>
+                        <textarea class="form-control mb-3" id="textarea-input" rows="5">Клиент очень важен, за клиентов последует клиент. Приостановите disse var ius для in eros печального элемента. Ход дома, мой кто бы украсил мульт, иногда не было боли, так что преимуществом дома была свободная жизнь.</textarea>
+                        <div>
+                          <button type="submit" class="btn btn-outline-white
+                            me-1">Изменить</button>
+                          <button type="submit" class="btn btn-outline-white save-btn">Сохранить</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <!-- border -->
+                    <div class="mb-6">
+                      <h4 class="mb-1">Основная информация</h4>
+
+                    </div>
+                    <form>
+                      <!-- row -->
+
+                      <div class="mb-3 row">
+                        <label for="fullName" class="col-sm-4 col-form-label
+                          form-label">Полное имя</label>
+                        <div class="col-sm-4 mb-3 mb-lg-0">
+                          <input type="text" class="form-control"
+                            placeholder="Имя" id="fullName" required>
+                        </div>
+                        <div class="col-sm-4">
+                          <input type="text" class="form-control"
+                            placeholder="Фамилия" id="lastName" required>
+                        </div>
+                      </div>
+
+                      <!-- row -->
+                      <div class="mb-3 row">
+                        <label for="email" class="col-sm-4 col-form-label
+                          form-label">Email</label>
+                        <div class="col-md-8 col-12">
+                          <input type="email" class="form-control"
+                            placeholder="Email" id="email" required>
+                        </div>
+                      </div>
+                      <!-- row -->
+                      <div class="mb-3 row">
+                        <label for="phone" class="col-sm-4 col-form-label
+                          form-label">Телефон <span class="text-muted">(необязательно)</span></label>
+                        <div class="col-md-8 col-12">
+                          <input type="text" class="form-control"
+                            placeholder="Телефон" id="phone" required>
+                        </div>
+                      </div>
+                      <!-- row -->
+                      <div class="mb-3 row">
+                        <label for="tg" class="col-sm-4 col-form-label
+                          form-label">Telegram</label>
+                        <div class="col-md-8 col-12">
+                          <input type="text" class="form-control"
+                            placeholder="@user" id="tg" required>
+                        </div>
+                      </div>
+                      <!-- row -->
+                      <div class="mb-3 row">
+                        <label for="location" class="col-sm-4 col-form-label
+                          form-label">Расположение</label>
+
+                        <div class="col-md-8 col-12">
+                          <select class="form-select" id="location">
+                            <option selected>Выберите страну</option>
+                            <option value="1">Индия</option>
+                            <option value="2">Великобритания</option>
+                            <option value="3">США</option>
+                          </select>
+                        </div>
+                      </div>
+                      <!-- row -->
+                      <div class="mb-3 row">
+                        <label for="addressLine" class="col-sm-4 col-form-label
+                          form-label">Адресная строка 1</label>
+
+
+                        <div class="col-md-8 col-12">
+                          <input type="text" class="form-control"
+                            placeholder="" id="addressLine" required>
+                        </div>
+                      </div>
+                      <!-- row -->
+                      <div class="mb-3 row">
+                        <label for="addressLineTwo" class="col-sm-4
+                          col-form-label form-label">Адресная строка 2</label>
+                        <div class="col-md-8 col-12">
+                          <input type="text" class="form-control"
+                            placeholder="" id="addressLineTwo"
+                            required>
+                        </div>
+                      </div>
+                      <!-- row -->
+                      <div class="row align-items-center">
+                        <label for="zipcode" class="col-sm-4 col-form-label
+                          form-label">Почтовый индекс<i data-feather="info"
+                            class="me-2 icon-xs"></i></label>
+
+                        <div class="col-md-8 col-12">
+                          <input type="text" class="form-control"
+                            placeholder="" id="zipcode" required>
+                        </div>
+                        <div class="offset-md-4 col-md-8 mt-4">
+                          <button type="submit" class="btn btn-primary save-btn"> Сохранять
+                            Изменения</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="row mb-8">
+            <div class="col-xl-3 col-lg-4 col-md-12 col-12">
+              <div class="mb-4 mb-lg-0">
+                <h4 class="mb-1">Настройка электронной почты</h4>
+                <p class="mb-0 fs-5 text-muted">Добавить настройки электронной почты в профиль
+                </p>
+              </div>
+
+            </div>
+
+            <div class="col-xl-9 col-lg-8 col-md-12 col-12">
+              <!-- card -->
+              <div class="card" id="edit">
+                <!-- card body -->
+                <div class="card-body">
+                  <div class="mb-6">
+                    <h4 class="mb-1">Email</h4>
+
+                  </div>
+                  <form>
+                    <!-- row -->
+                    <div class="mb-3 row">
+                      <!-- label -->
+                      <label for="newEmailAddress" class="col-sm-4
+                        col-form-label form-label">Новый email</label>
+                      <div class="col-md-8 col-12">
+                        <!-- input -->
+                        <input type="email" class="form-control"
+                          placeholder="Введите ваш адрес электронной почты"
+                          id="newEmailAddress" required>
+                      </div>
+                      <!-- button -->
+                      <div class="offset-md-4 col-md-8 col-12 mt-3">
+                        <button type="submit" class="btn btn-primary save-btn">Сохранять
+                          Изменения</button>
+                      </div>
+                    </div>
+                  </form>
+
+                  <div class="mb-6 mt-6">
+                    <h4 class="mb-1">Измените свой пароль</h4>
+
+                  </div>
+                  <form>
+                    <!-- row -->
+                    <div class="mb-3 row">
+                      <label for="currentPassword" class="col-sm-4
+                        col-form-label form-label">Текущий пароль</label>
+
+                      <div class="col-md-8 col-12">
+                        <input type="password" class="form-control"
+                          placeholder="Введите текущий пароль"
+                          id="currentPassword" required>
+                      </div>
+                    </div>
+                    <!-- row -->
+                    <div class="mb-3 row">
+                      <label for="currentNewPassword" class="col-sm-4
+                        col-form-label form-label">Новый пароль</label>
+
+                      <div class="col-md-8 col-12">
+                        <input type="password" class="form-control"
+                          placeholder="Введите новый пароль"
+                          id="currentNewPassword" required>
+                      </div>
+                    </div>
+                    <!-- row -->
+                    <div class="row align-items-center">
+                      <label for="confirmNewpassword" class="col-sm-4
+                        col-form-label form-label">Подтвердите новый пароль</label>
+                      <div class="col-md-8 col-12 mb-2 mb-lg-0">
+                        <input type="password" class="form-control"
+                          placeholder="Подтвердите новый пароль"
+                          id="confirmNewpassword" required>
+                      </div>
+                      <!-- list -->
+                      <div class="offset-md-4 col-md-8 col-12 mt-4">
+                        <h6 class="mb-1">Требования к паролю:</h6>
+                        <p>Убедитесь, что эти требования выполнены:</p>
+                        <ul>
+                          <li> Минимум 8 символов, чем больше, тем лучше</li>
+                          <li>Хотя бы один символ нижнего регистра</li>
+                          <li>Хотя бы один символ верхнего регистра</li>
+                          <li>Хотя бы одно число, символ или пробел
+                          </li>
+                        </ul>
+                        <button type="submit" class="btn btn-primary save-btn">Сохранять
+                          Изменения</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row mb-8">
+            <div class="col-xl-3 col-lg-4 col-md-12 col-12">
+              <div class="mb-4 mb-lg-0">
+                <h4 class="mb-1">Настройки</h4>
+                <p class="mb-0 fs-5 text-muted">Настройте свои предпочтения</p>
+              </div>
+
+            </div>
+
+            <div class="col-xl-9 col-lg-8 col-md-12 col-12">
+              <div class="card" id="preferences">
+                <div class="card-body">
+                  <div class="mb-6">
+                    <h4 class="mb-1">Настройки</h4>
+
+                  </div>
+                  <form>
+                    <!-- row -->
+                    <div class="mb-3 row">
+                      <label for="langauge" class="col-sm-4 col-form-label
+                        form-label">Язык</label>
+
+                      <div class="col-md-8 col-12">
+                        <select class="form-select" id="langauge">
+                          <option selected>Английский</option>
+                          <option value="1">Хинди</option>
+                          <option value="2">Испанский</option>
+                          <option value="3">Арабский</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!-- row -->
+                    <div class="mb-3 row">
+                      <label for="timeZone" class="col-sm-4 col-form-label
+                        form-label">Часовой пояс</label>
+
+                      <div class="col-md-8 col-12">
+                        <select class="form-select" id="timeZone">
+                          <option selected>GMT +5.30</option>
+                          <option value="1">GMT +5.30</option>
+                          <option value="2">GMT +5.30</option>
+                          <option value="3">GMT +5.30 </option>
+                        </select>
+                      </div>
+                    </div>
+                    <!-- row -->
+                    <div class="mb-3 row">
+                      <label for="dateFormat" class="col-sm-4 col-form-label
+                        form-label">Формат даты</label>
+
+                      <div class="col-md-8 col-12">
+                        <select class="form-select" id="dateFormat">
+                          <option selected>Нет предпочтений</option>
+                          <option value="Preference">Предпочтение</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <!-- row -->
+                    <div class="mb-3 row">
+                      <label class="col-sm-4 col-form-label form-label">По умолчанию</label>
+                      <div class="col-md-8 col-12">
+                        <div class="form-check custom-radio
+                          form-check-inline">
+                          <input type="radio" id="customRadioInlineOn"
+                            name="customRadioInline" class="form-check-input">
+                          <label class="form-check-label"
+                            for="customRadioInlineOn">Вкл
+                          </label>
+                        </div>
+                        <div class="form-check custom-radio
+                          form-check-inline">
+                          <input type="radio" id="customRadioInlineOff"
+                            name="customRadioInline" class="form-check-input">
+                          <label class="form-check-label"
+                            for="customRadioInlineOff">Выкл</label>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- row -->
+                    <div class="mb-3 row">
+                      <div class="col-md-4 col-12">
+                        <label class="mb-0 form-label">Выберите вариант по умолчанию</label>
+                      </div>
+                      <div class="col-md-8 col-12">
+                        <div class="form-check mb-2">
+                          <input type="checkbox" class="form-check-input"
+                            id="customChecktellMe">
+                          <label class="form-check-label"
+                            for="customChecktellMe">Скажи мне</label>
+                        </div>
+                        <div class="form-check mb-2">
+                          <input type="checkbox" class="form-check-input"
+                            id="customCheckemail">
+                          <label class="form-check-label"
+                            for="customCheckemail">Открыть e-mail</label>
+                        </div>
+                        <div class="form-check mb-2">
+                          <input type="checkbox" class="form-check-input"
+                            id="customCheckemailTwo" checked>
+                          <label class="form-check-label"
+                            for="customCheckemailTwo">Показать по умолчанию</label>
+                        </div>
+                      </div>
+                      <div class="offset-md-4 col-md-8 col-12 mt-2">
+                        <button type="submit" class="btn btn-primary save-btn">Сохранять
+                          Изменения</button>
+                      </div>
+                    </div>
+
+
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-3 col-lg-4 col-md-12 col-12">
+              <div class="mb-4 mb-lg-0">
+                <h4 class="mb-1">Удалить аккаунт</h4>
+                <p class="mb-0 fs-5 text-muted">Легко настроить социальные сети
+                  аккаунта</p>
+              </div>
+
+            </div>
+
+            <div class="col-xl-9 col-lg-8 col-md-12 col-12">
+              <!-- card -->
+
+              <div class="card mb-6">
+                <!-- card body -->
+                <div class="card-body">
+                  <div class="mb-6">
+                    <h4 class="mb-1">Опасная зона </h4>
+
+                  </div>
+                  <div>
+                    <!-- text -->
+                    <p>Удалите любой контент, который у вас есть, например статьи,
+                      комментарии, ваш список для чтения или сообщения чата. Разрешить
+                      имя пользователя, чтобы стать доступным для всех</p>
+                    <a href="#" class="btn btn-danger">Удалить аккаунт</a>
+                    <p class="small mb-0 mt-3">Не стесняйтесь обращаться по любому вопросу: <a
+                      href="#">dashui@example.com</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Scripts -->
+    <!-- Libs JS -->
+<script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+<script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/libs/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="../assets/libs/feather-icons/dist/feather.min.js"></script>
+<script src="../assets/libs/prismjs/prism.js"></script>
+<script src="../assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+<script src="../assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+<script src="../assets/libs/prismjs/plugins/toolbar/prism-toolbar.min.js"></script>
+<script src="../assets/libs/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+
+
+<!-- Google Translate -->
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+
+
+<script src="../assets/js/theme.min.js"></script>
+
+<!-- Theme JS -->
+<script src="../assets/js/theme.min.js"></script>
+
+<script>
+  new ClipboardJS('.copy_link');
+</script>
+
+
+
+  </body>
+
+</html>

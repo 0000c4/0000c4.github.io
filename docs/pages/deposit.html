@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+<!-- Favicon icon-->
+<link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon/favicon.ico">
+
+<!-- Libs CSS -->
+
+
+<link href="../assets/libs/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<link href="../assets/libs/dropzone/dist/dropzone.css"  rel="stylesheet">
+<link href="../assets/libs/@mdi/font/css/materialdesignicons.min.css" rel="stylesheet" />
+<link href="../assets/libs/prismjs/themes/prism-okaidia.css" rel="stylesheet">
+
+<link rel="stylesheet" href="../assets/css/theme.min.css">
+
+<!-- Theme CSS -->
+<!-- build:css ../assets/css/theme.min.css -->
+<link rel="stylesheet" href="../assets/css/theme.css">
+<!-- endbuild -->
+    <title>Депозит</title>
+  </head>
+
+  <body class="bg-light">
+    <!-- <div id="db-wrapper"> -->
+      <!-- navbar vertical  -->
+      
+      <!-- page content  -->
+      <!-- <div id="page-content"> -->
+        <div class="position-relative">
+  <nav class="navbar navbar-dark bg-primary py-2">
+    <div class="container-fluid d-flex">
+      <button class="navbar-toggler mt-2 me-3 rounded bg-light p-1"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar">
+        <i class="bi bi-text-indent-left fs-2 text-dark"></i>
+      </button>
+      <button type="button" class="btn btn-light p-2 mt-2">
+        <i class="bi bi-eye"></i>
+        Профиль пригласителя
+      </button>
+      <!--Navbar nav -->
+      <ul
+        class=" ms-auto d-flex align-items-center
+        nav-top-wrap gap-3 hstack mt-2 list-unstyled">
+        <li class="dropdown">
+          <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Выбрать язык
+         </button>
+          <div
+            class="dropdown-menu dropdown-menu-end dropdown ms-2"
+            aria-labelledby="dropdownLang">
+            <ul class="select-language d-flex flex-column list-unstyled">
+              <li class="language__img mb-2" data-google-lang="ru">
+                <img
+                  class="ms-7"
+                  src="../assets/images/flag-icon/free-icon-russia-5315463.png"
+                  alt="RUS"
+                  data-google-lang="ru"
+                  />
+                <a href="#"> Русский </a>
+              </li>
+              <li class="language__img mb-2" data-google-lang="en">
+                <img
+                  class="ms-7"
+                  src="../assets/images/flag-icon/free-icon-united-kingdom-197374.png"
+                  alt="EN"
+                  data-google-lang="en"
+                  />
+                <a href="#"> Английский </a>
+              </li>
+              <li class="language__img mb-2" data-google-lang="de">
+                <img
+                  class="ms-7"
+                  src="../assets/images/flag-icon/free-icon-germany-5315745.png"
+                  alt="DE"
+                  data-google-lang="de"
+                  />
+                <a href="#"> Немецкий </a>
+              </li>
+              <li class="language__img mb-2" data-google-lang="fr">
+                <img
+                  class="ms-7"
+                  src="../assets/images/flag-icon/free-icon-france-197560.png"
+                  alt="FR"
+                  data-google-lang="fr"
+                  />
+                <a href="#"> Французский </a>
+              </li>
+              <li class="language__img mb-2" data-google-lang="cn">
+                <img
+                  class="ms-7"
+                  src="../assets/images/flag-icon/china.png"
+                  alt="CN"
+                  data-google-lang="cn"
+                  />
+                <a href="#"> Китайский </a>
+              </li>
+              <li class="language__img mb-2" data-google-lang="es">
+                <img
+                  class="ms-7"
+                  src="../assets/images/flag-icon/spain.png"
+                  alt="ES"
+                  data-google-lang="es"
+                  />
+                <a href="#"> Испансикй </a>
+              </li>
+              <li class="language__img mb-2" data-google-lang="ar">
+                <img
+                  class="ms-7"
+                  src="../assets/images/flag-icon/argentina.png"
+                  alt="AR"
+                  data-google-lang="ar"
+                  />
+                <a href="#"> Аргентинский </a>
+              </li>
+              <li class="language__img mb-2" data-google-lang="pt">
+                <img
+                  class="ms-7"
+                  src="../assets/images/flag-icon/portugal.png"
+                  alt="PT"
+                  data-google-lang="pt"
+                  />
+                <a href="#"> Португальский </a>
+              </li>
+              <li class="language__img mb-2" data-google-lang="hi">
+                <img
+                  class="ms-7"
+                  src="../assets/images/flag-icon/india.png"
+                  alt="HI"
+                  data-google-lang="hi"
+                  />
+                <a href="#"> Хинди </a>
+              </li>
+              <li class="language__img " data-google-lang="tr">
+                <img
+                  class="ms-7"
+                  src="../assets/images/flag-icon/turkey.png"
+                  alt="TR"
+                  data-google-lang="tr"
+                  />
+                <a href="#"> Турецкий </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- Socials  -->
+        <li class="card ms-auto">
+          <div class="card-body p-2">
+            <ul class="list-unstyled hstack gap-3">
+              <li>
+                <a href="#" title="Chanel">
+                  <img src="../assets/images/socials/tg.png" alt="" />
+                </a>
+              </li>
+              <li>
+                <a href="#" title="Support">
+                  <img src="../assets/images/socials/tg.png" alt="" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <!-- Account -->
+        <li class="dropdown ms-2">
+          <a
+            class="rounded-circle"
+            href="#"
+            role="button"
+            id="dropdownUser"
+            data-bs-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false">
+            <div class="avatar avatar-md avatar-indicators avatar-online">
+              <img
+                alt="avatar"
+                src="../assets/images/avatar/avatar-1.jpg"
+                class="rounded-circle"
+                />
+            </div>
+          </a>
+          <div
+            class="dropdown-menu dropdown-menu-end"
+            aria-labelledby="dropdownUser">
+            <div class="px-4 pb-0 pt-2">
+              <div class="lh-1">
+                <h5 class="mb-1">Джон Э. Гейнджер</h5>
+              </div>
+              <div class="dropdown-divider mt-3 mb-2"></div>
+            </div>
+            <ul class="list-unstyled">
+              <li class="">
+                <a class="dropdown-item" href="../pages/profile.html">
+                  <i
+                    class="me-2 icon-xxs dropdown-item-icon"
+                    data-feather="user"></i>Мой профиль
+                </a>
+              </li>
+              <li class="">
+                <a class="dropdown-item" href="../pages/settings.html">
+                  <i
+                    class="me-2 icon-xxs dropdown-item-icon"
+                    data-feather="settings"></i>Настройки профиля
+                </a>
+              </li>
+              <li class="">
+                <a class="dropdown-item"
+                  href="../pages/payment-details.html">
+                  <i
+                    class="me-2 icon-xxs dropdown-item-icon"
+                    data-feather="briefcase"></i>Платежные реквизиты
+                </a>
+              </li>
+              <li class="">
+                <a class="dropdown-item" href="../pages/sign-in.html">
+                  <i
+                    class="me-2 icon-xxs dropdown-item-icon"
+                    data-feather="power"></i>Выход
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+      <div class="offcanvas offcanvas-start bg-gray-800 p-4"
+        tabindex="-1" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel "
+        style="max-width: 300px">
+        <div class="offcanvas-header py-0">
+          <!-- Brand logo -->
+          <a class="navbar-brand" href="../index.html">
+            <img src="../assets/images/brand/logo/logo.svg" alt="" />
+          </a>
+          <button type="button" class="btn-close
+            text-reset text-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"> </button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav flex-column" id="sideNavbar">
+            <li class="nav-item">
+              <a
+                class="nav-link has-arrow "
+                href="../index.html">
+                <i class="bi bi-house me-2"></i>
+                Панель
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link has-arrow  active "
+                href="../pages/deposit.html">
+                <i class="bi bi-safe2 me-2"></i>
+                Депозит
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link has-arrow "
+                href="../pages/withdrawal-of-funds.html">
+                <i class="bi bi-cash-coin me-2"></i>
+                Вывод средств
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link has-arrow "
+                href="../pages/partners.html">
+                <i class="bi bi-people me-2"></i>
+                Партнерам
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link has-arrow "
+                href="../pages/history-all.html">
+                <i class="bi bi-clock-history me-2"></i>
+                История
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link has-arrow "
+                href="../reviews.html">
+                <i class="bi bi-chat-left-heart me-2"></i>
+                Отзывы
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link has-arrow "
+                href="../pages/faq.html">
+                <i class="bi bi-question-octagon me-2"></i>
+                FAQ
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<!-- Navbar
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+    data-bs-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false"
+    aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+          role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1"
+          aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control me-sm-2" type="search" placeholder="Search"
+        aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav> -->
+        <!-- Container fluid -->
+        <div class="container-fluid p-6">
+          <div class="row">
+            <div class="col-lg-12 col-md-12 col-12">
+              <!-- Page header -->
+
+              <div class="border-bottom pb-4 mb-4">
+                <h3 class="mb-0 fw-bold">Депозит</h3>
+              </div>
+            </div>
+          </div>
+          <div class="container">
+          <!-- row  -->
+          <div class="row mt-0 d-flex justify-content-center">
+            <div
+              class="col-xl-10 col-xl-12 col-lg-12 col-md-12 col-12"
+            >
+              <div class="row">
+                <div class="col-12 mb-6">
+                  <div class="card">
+                    <div class="card-header bg-white">
+                      <h4 class="mb-0">Создание депозита</h4>
+                    </div>
+                    <div class="card-body">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col">
+                            <h5>Выбор валюты счета</h5>
+                            <div
+                              class="btn-group"
+                              role="group"
+                              aria-label="Basic radio toggle button group"
+                            >
+                              <input
+                                type="radio"
+                                class="btn-check"
+                                name="btnradio"
+                                id="btnradio-usd"
+                                autocomplete="off"
+                                checked
+                              />
+                              <label
+                                class="btn btn-outline-primary"
+                                for="btnradio-usd"
+                                >$</label
+                              >
+                              <input
+                                type="radio"
+                                class="btn-check"
+                                name="btnradio"
+                                id="btnradio-rub"
+                                autocomplete="off"
+                              />
+                              <label
+                                class="btn btn-outline-primary"
+                                for="btnradio-rub"
+                                >₽</label
+                              >
+                            </div>
+                          </div>
+                          <div class="col">
+                            <h5>Выбор платежного средства</h5>
+                            <select class="form-select form-select bg-primary text-white">
+                              <option data-currency="usd" class="payment_option" value="1" selected>EPayCore (USD)</option>
+                              <option data-currency="usd" class="payment_option" value="2">Bitcoin (BTC)</option>
+                              <option data-currency="usd" class="payment_option" value="3">TRC-20 (USDT)</option>
+                              <option data-currency="rub" class="payment_option" value="4">Qiwi</option>
+                              <option data-currency="rub" class="payment_option" value="5">Tinkoff</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col mb-6">
+                  <div class="calc @@classList">
+  <div class="card bg-primary h-100">
+    <div
+      class="card-header d-flex justify-content-between align-items-center">
+      <h4 class="mb-0 text-white">Калькулятор прибыли</h4>
+      <div class="icon-shape icon-md bg-light-primary text-primary rounded-2">
+        <i class="bi bi-file-spreadsheet fs-4"></i>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="container">
+        <div class="row">
+          <div class="col mb-4">
+            <div class="card h-100 border border-primary">
+              <div class="card-body d-flex justify-content-center align-items-center">
+                <!-- chart  -->
+                <div>
+                  <div class="mb-1">
+                    <div
+                      id="perfomanceChart"
+                      class="d-flex justify-content-center"></div>
+                  </div>
+                  <!-- icon with content  -->
+                  <div>
+                    <label class="form-label" for="calc-input">Введите сумму</label>
+                    <input
+                      type="text"
+                      id="calc-input"
+                      class="form-control"
+                      placeholder="min 10$"
+                      />
+                    <a href="../pages/waiting-for-payment.html" type="button" class="btn btn-info text-white mt-3">
+                      Инвестировать
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col px-0 mb-4">
+            <div class="container">
+              <div class="row">
+                <div class="col mb-4">
+                  <div class="card border border-primary">
+                    <div class="card-body">
+                      <h4 class="card-title mb-2">Доход за 24 часа</h4>
+                      <p class="card-text fs-1 text-info fw-bold"
+                        id="calc-income-day">0.2$</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col mb-4">
+                  <div class="card border border-primary">
+                    <div class="card-body">
+                      <h4 class="card-title mb-2">Доход за неделю</h4>
+                      <p class="card-text fs-1 text-info fw-bold"
+                        id="calc-income-week">1.3$</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col mb-4">
+                  <div class="card border border-primary">
+                    <div class="card-body">
+                      <h4 class="card-title mb-2">Доход за месяц</h4>
+                      <p class="card-text fs-1 text-info fw-bold"
+                        id="calc-income-month">5.6$</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col mb-4">
+                  <div class="card border border-primary">
+                    <div class="card-body">
+                      <h4 class="card-title mb-2">Доход за 365 дней</h4>
+                      <p class="card-text fs-1 text-info fw-bold"
+                        id="calc-income-year">65.7$</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <div class="card border border-primary">
+                    <div class="card-body">
+                      <h4 class="card-title">Реферальная программа</h4>
+                      <div class="overflow-auto">
+                        <table class="table table-bordered border-primary mb-0">
+                          <thead class="">
+                            <tr class="">
+                              <th scope="col" class="text-info fs-3 fw-bold
+                                bg-light-info">Line 1</th>
+                              <th scope="col" class="text-dark fs-3 fw-bold">Line
+                                2</th>
+                              <th scope="col" class="text-dark fs-3 fw-bold">Line
+                                3</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="text-info fw-bold fs-3 bg-light-info"
+                                id="calc-ref-1">5%</td>
+                              <td class="text-dark fs-3" id="calc-ref-2">2%</td>
+                              <td class="text-dark fs-3" id="calc-ref-3">1%</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 mb-6">
+                  <!-- card  -->
+                  <div class="card">
+                    <!-- card header  -->
+                    <div class="card-header p-4 bg-white">
+                      <h4 class="mb-0">Обзор текущего депозита</h4>
+                    </div>
+                    <!-- card body  -->
+                    <div class="card-body">
+                      <!-- row  -->
+                      <div class="row">
+                        <div class="col-xl-8 col-lg-6 col-md-12 col-12">
+                          <div class="mb-2">
+                            <!-- content  -->
+                            <p class="text-muted mb-0">Текущий план</p>
+                            <div
+                              class="d-flex justify-content-between align-items-center"
+                            >
+                              <h3 class="mt-2 mb-3 fw-bold">Название</h3>
+                              <h3 class="mt-2 mb-3 fw-bold text-end">
+                                Открыт:
+                                <span class="text-primary ms-2">08.09.23</span>
+                              </h3>
+                            </div>
+                            <p class="text-dark">
+                              Инвестиционный план (название) предлагает вам
+                              зарабатывать 2.4% в сутки ежедневно, включая
+                              выходные дни. Увеличить прибыль вы можете в любое
+                              время перейдя на другой тарифный план.
+                            </p>
+                            <p>
+                              Изменение тарифа происходит автоматически при
+                              увеличении депозита
+                            </p>
+                          </div>
+                        </div>
+                        <!-- col  -->
+                        <div class="col-xl-4 col-lg-6 col-md-12 col-12">
+                          <!-- content  -->
+                          <div>
+                            <small class="text-muted"> Размер вашего депозита</small>
+                            <h1 class="fw-bold text-primary">$499 USD</h1>
+                            <h1 class="fw-bold"><span class="text-success">2.4%</span> в сутки</h1>
+                            <a
+                              href="#"
+                              class="mb-3 text-muted text-primary-hover d-block"
+                              >Узнайте больше о нашей политике членства</a
+                            >
+                            <a
+                              href="#"
+                              class="btn btn-dark d-grid mb-2"
+                              data-bs-toggle="modal"
+                              data-bs-target="#planModal"
+                            >
+                              Изменить план
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- card footer  -->
+                    <div class="card-footer bg-white">
+                      <div
+                        class="d-md-flex justify-content-between align-items-center"
+                      >
+                        <!-- text  -->
+                        <div class="mb-3 mb-lg-0 text-center text-sm-start">
+                          <h5 class="text-uppercase mb-0">Способ оплаты</h5>
+                          <div class="mt-2">
+                            <img
+                              src="../assets/images/creditcard/mastercard.svg"
+                              alt=""
+                            />
+                            <span class="fw-bold">***8773</span>
+                          </div>
+                        </div>
+                        <div class="text-center text-md-start">
+                          <a href="#" class="link-danger">Удалить</a>
+                          <a href="#" class="btn btn-outline-white ms-2"
+                            >Изменить карту</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- update plan modal -->
+    <div
+      class="modal fade"
+      id="planModal"
+      tabindex="-1"
+      aria-labelledby="planModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header p-3">
+            <div>
+              <h4 class="mb-0" id="planModalLabel">Update Your Plan</h4>
+            </div>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body p-5">
+            <h4 class="mb-1">Change your plan</h4>
+            <p>You can choose from one of the available plans bellow.</p>
+            <div class="card border shadow-none">
+              <div class="card-body border-bottom">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <div class="form-check">
+                      <input
+                        type="radio"
+                        id="customRadioStandard"
+                        name="customRadio"
+                        class="form-check-input"
+                      />
+                      <label
+                        class="form-check-label form-label"
+                        for="customRadioStandard"
+                      >
+                        <span class="d-block text-dark fw-bold"
+                          >Standard
+                          <span class="badge bg-success"
+                            >Active Plan</span
+                          ></span
+                        >
+                        <span class="mb-0 small text-muted">Single Site</span>
+                      </label>
+                    </div>
+                  </div>
+                  <div>
+                    <h4 class="fw-bold mb-0 text-dark">$49.00</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body border-bottom">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <div class="form-check">
+                      <input
+                        type="radio"
+                        id="customRadioMultiside"
+                        name="customRadio"
+                        class="form-check-input"
+                      />
+                      <label
+                        class="form-check-label form-label"
+                        for="customRadioMultiside"
+                      >
+                        <span class="d-block text-dark fw-bold"
+                          >Multiside
+                        </span>
+                        <span class="mb-0 small text-muted"
+                          >Unlimited sites</span
+                        >
+                      </label>
+                    </div>
+                  </div>
+                  <div>
+                    <h4 class="fw-bold mb-0 text-dark">$149.00</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    <div class="form-check">
+                      <input
+                        type="radio"
+                        id="customRadioExtended"
+                        name="customRadio"
+                        class="form-check-input"
+                      />
+                      <label
+                        class="form-check-label form-label"
+                        for="customRadioExtended"
+                      >
+                        <span class="d-block text-dark fw-bold">Extended </span>
+                        <span class="mb-0 small text-muted"
+                          >For spanaying users</span
+                        >
+                      </label>
+                    </div>
+                  </div>
+                  <div>
+                    <h4 class="fw-bold mb-0 text-dark">$449.00</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer justify-content-start p-5">
+            <button type="button" class="btn btn-primary">
+              Save and Continue
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Billing Address Modal -->
+    <div
+      class="modal fade"
+      id="billingAddressModal"
+      tabindex="-1"
+      aria-labelledby="billingAddressModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header p-5">
+            <div>
+              <h4 class="mb-1" id="billingAddressModalLabel">
+                Billing Address
+              </h4>
+              <p class="mb-0">
+                Please provide the billing address with the credit card you ve
+                provided.
+              </p>
+            </div>
+
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body p-5">
+            <form class="row">
+              <div class="mb-3 col-12">
+                <label for="country" class="form-label">Country</label>
+                <select class="form-select" id="country">
+                  <option selected>India</option>
+                  <option value="US">US</option>
+                  <option value="UK">UK</option>
+                  <option value="UAE">UAE</option>
+                </select>
+              </div>
+              <div class="mb-3 col-12">
+                <label for="addressOne" class="form-label"
+                  >Address line 1</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="123 Ocean Ave"
+                  id="addressOne"
+                  required
+                />
+              </div>
+              <div class="mb-3 col-12">
+                <label for="addressTwo" class="form-label"
+                  >Address line 2</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="123 Ocean Ave"
+                  id="addressTwo"
+                  required
+                />
+              </div>
+              <div class="mb-3 col-12">
+                <label for="city" class="form-label">City</label>
+                <select class="form-select" id="city">
+                  <option selected>Ahmedabad</option>
+                  <option value="New York">New York</option>
+                  <option value="Los Angeles">Los Angeles</option>
+                  <option value="Chicago">Chicago</option>
+                </select>
+              </div>
+              <div class="mb-3 col-md-6 col-12">
+                <label for="state" class="form-label">State</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Gujarat"
+                  id="state"
+                  required
+                />
+              </div>
+              <div class="mb-3 col-md-6 col-12">
+                <label for="zipCode" class="form-label">Zip/Postal Code</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="000000"
+                  id="zipCode"
+                  required
+                />
+              </div>
+              <div class="col-12 mb-3">
+                <div class="form-check custom-checkbox">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="customCheckAddress"
+                  />
+                  <label class="form-check-label" for="customCheckAddress"
+                    >Make this my default payment method.</label
+                  >
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary d-grid">
+                  Save Address
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <!-- Libs JS -->
+<script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+<script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../assets/libs/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="../assets/libs/feather-icons/dist/feather.min.js"></script>
+<script src="../assets/libs/prismjs/prism.js"></script>
+<script src="../assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+<script src="../assets/libs/dropzone/dist/min/dropzone.min.js"></script>
+<script src="../assets/libs/prismjs/plugins/toolbar/prism-toolbar.min.js"></script>
+<script src="../assets/libs/prismjs/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+
+
+<!-- Google Translate -->
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+
+
+<script src="../assets/js/theme.min.js"></script>
+
+<!-- Theme JS -->
+<!-- build:js ../assets/js/theme.min.js -->
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/feather.js"></script>
+<script src="../assets/js/sidebarMenu.js"></script>
+
+<script src="../assets/js/deposit.js"></script>
+
+<script src="../assets/js/settings.js"></script>
+
+<script src="../assets/js/clipboard.min.js"></script>
+
+<script src="../assets/js/google-translate.js"></script>
+
+<script src="../assets/js/watch-all.js"></script>
+
+<!-- endbuild -->
+
+<script>
+  new ClipboardJS('.copy_link');
+</script>
+    <script>
+  const calc_input = document.getElementById("calc-input");
+
+  // Доходы за разные сроки
+  const calc_income_day = document.getElementById("calc-income-day");
+  const calc_income_week = document.getElementById("calc-income-week");
+  const calc_income_month = document.getElementById("calc-income-month");
+  const calc_income_year = document.getElementById("calc-income-year");
+
+  // Ячейки таблиц реферальной программы
+  const calc_ref_1 = document.getElementById("calc-ref-1"); // Единственная изменяемая ячейка на данный момент
+  const calc_ref_2 = document.getElementById("calc-ref-2");
+  const calc_ref_3 = document.getElementById("calc-ref-3");
+
+  // Шкала процентов
+  const prcnt_1 = 1.8; //10-500$
+  const prcnt_2 = 2.3; //501-1000$
+  const prcnt_3 = 2.8; //1001-3001$ 
+  const prcnt_4 = 3.4; //3001-5000$ 
+  const prcnt_5 = 3.9; //5001-10000$ 
+  const prcnt_6 = 4.5; //>10000$
+
+  // Реферальная программа
+  const ref_1 = '5%'; //<1000$
+  const ref_2 = '6%'; //1001-5000$
+  const ref_3 = '7%'; //5001-10000$
+  const ref_4 = '8%'; //>10000$
+
+  // Генерируется диаграмма из библиотеки
+  let options = {
+    labels: ["0$ в сутки"],
+    series: [1.8],
+    chart: {
+      height: 320,
+      width: 320,
+      type: "radialBar",
+    },
+    colors: ["#0dcaf0"],
+    stroke: {
+      lineCap: "round",
+    },
+    plotOptions: {
+      radialBar: {
+        startAngle: 0,
+        endAngle: 8000,
+        hollow: {
+          size: "70%",
+        },
+        track: {
+          background: "#e6e6e6",
+        },
+        dataLabels: {
+          show: true,
+          name: {
+            offsetY: 40,
+            show: false,
+            color: "#000",
+            fontSize: "15px",
+          },
+          value: {
+            // offsetY: -5,
+            color: "#0dcaf0",
+            fontSize: "50px",
+            fontStyle: "bold",
+            class: "fs-bold",
+            show: true,
+          },
+        },
+      },
+    },
+  };
+  let chart = new ApexCharts(
+    document.querySelector("#perfomanceChart"),
+    options
+  );
+  chart.render();
+
+  calc_input.addEventListener("input", (e) => {
+    let v = e.target.value;
+    let prcnt_v = 0;
+    let ref_v = '';
+    if (10 <= v && v <= 500){
+      prcnt_v = prcnt_1;
+      ref_v = ref_1;
+    } else if  (500 < v && v <= 1000) {
+      prcnt_v = prcnt_2;
+      ref_v = ref_1;
+    } else if  (1000 < v && v <= 3000) {
+      prcnt_v = prcnt_3;
+      ref_v = ref_2;
+    } else if  (3000 < v && v <= 5000) {
+      prcnt_v = prcnt_4;
+      ref_v = ref_2;
+    } else if  (5000 < v && v <= 10000) {
+      prcnt_v = prcnt_5;
+      ref_v = ref_3;
+    } else if  (10000 < v) {
+      prcnt_v = prcnt_6;
+      ref_v = ref_4;
+    } else {
+      prcnt_v = prcnt_1;
+      ref_v = ref_1;
+    }
+    
+    calc_income_day.textContent = `${(v * prcnt_v**1).toFixed(1)}$`;
+    calc_income_week.textContent = `${(v * prcnt_v*7).toFixed(1)}$`;
+    calc_income_month.textContent = `${(v * prcnt_v*31).toFixed(1)}$`;
+    calc_income_year.textContent = `${(v * prcnt_v*365).toFixed(1)}$`;
+
+    calc_ref_1.textContent = `${ref_v}`;
+
+    chart.updateOptions({
+      series: [`${prcnt_v}`],
+    })
+  });
+</script>
+
+  </body>
+</html>
