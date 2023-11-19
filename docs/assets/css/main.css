@@ -51,7 +51,7 @@
 .logo_container {
     margin-bottom: 19px;
     display: flex;
-    gap: 12px;
+    gap: 4px;
 }
 
 .link_container {
@@ -315,7 +315,8 @@
 
 .circle_title {
     text-align: center;
-    font-size: 14px;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .perfomanceChart {
@@ -393,13 +394,16 @@
     position: relative;
     top: -67px;
     font-size: 16px;
+    font-weight: 500;
 }
 
 .circles_footer_right_block {
     text-align: end;
     margin-bottom: 8px;
 }
-
+.perfomanceChart{
+    transform: scale(1.1);
+}
 .timer {
     color: #212b36;
     font-weight: 600;
@@ -482,7 +486,6 @@
     }
     .calc_container_image.active {/*после перестроения картинка находится по центру и её не надо перемещать никуда*/
         transform:scale(1.5);
-        border: none;
     }
     
 }
@@ -540,6 +543,9 @@
     
     .circle_row_1_2 {
         gap:12px;
+    }
+    .calc_container_image.active {/*после перестроения картинка находится по центру и её не надо перемещать никуда*/
+        transform:scale(1.3);
     }
 }
 
