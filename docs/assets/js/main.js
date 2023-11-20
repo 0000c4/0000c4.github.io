@@ -16,8 +16,8 @@ modal.addEventListener("click", () => {
 })
 //перелистывание фотографий
 const imageList = [
-    "/assets/images/home.jpg",
-    "/assets/images/home_1.jpg"
+    "./assets/images/home.jpg",
+    "./assets/images/home_1.jpg"
 ];
 let indexList = 0;
 
