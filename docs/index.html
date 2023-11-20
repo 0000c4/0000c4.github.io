@@ -426,13 +426,20 @@
               <div class="card-body">
                 <div class="container">
                   <div class="row calc_container">
-                    <div id="Image_viewer" class="col calc_container_image">
-                      <img class="image_button_left" id="Image_viewer_left" src="assets/images/UI/image_button.png"
-                        alt="" srcset="">
-                      <img class="image_button_right" id="Image_viewer_right"
-                        src="assets/images/UI/image_button_right.png" alt="" srcset="">
+                    <div class="calc_left_block">
+                      <div id="Image_viewer" class="col calc_container_image">
+                        <img class="image_button_left" id="Image_viewer_left" src="assets/images/UI/image_button.png"
+                          alt="" srcset="">
+                        <img class="image_button_right" id="Image_viewer_right"
+                          src="assets/images/UI/image_button_right.png" alt="" srcset="">
+                      </div>
+                      <div class="circles_footer calc_card_border">
+                        <div class="circles_footer_right_block">
+                          <span>Сделка закроется через:</span>
+                          <span class="timer">23:59:50</span>
+                        </div>
+                      </div>
                     </div>
-
                     <div class="col calc_right_block px-0">
                       <div class="circles_header">
                         <div class="circle_title_date">
@@ -451,7 +458,9 @@
                               <div class=" perfomanceChart d-flex justify-content-center"></div>
                             </div>
                             <div>
-                              <h5 class="circle_title">Макс.сумма вклада</h5>
+                              <h5 class="circle_title">Макс.сумма вклада
+                                <span class="ghost_text"><br>⠀</span><!--это надо чтобы кружки не ломались при уменьшении разрешения-->
+                              </h5>
                               <div class=" perfomanceChart d-flex justify-content-center"></div>
                             </div>
                             <div>
@@ -490,13 +499,10 @@
                         </div>
                       </div>
                       <div class="circles_footer calc_card_border">
-                        <div>
-                          *После достижение лимита участия <br> в <b>100 000$</b>
-                          сделка будет автоматически закрыта.
-                        </div>
                         <div class="circles_footer_right_block">
-                          <span>Сделка закроется через:</span>
-                          <span class="timer">23:59:50</span>
+                          <span class="circles_footer_text">*После достижения общего лимита:</span>
+                          <span class="circles_footer_limit">100 000$</span>
+                          <span class="circles_footer_text">Сделка будет автоматически закрыта.</span>
                         </div>
                       </div>
                     </div>

@@ -1,3 +1,108 @@
+.balance_container {
+
+}
+.balance_actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 24px;
+}
+.balance {
+}
+.balance_title {
+    margin: 0;
+    font-size: 20px;
+}
+.balance_value {
+    font-size: 36px;
+    font-weight: 600;
+    color: #000000cc;
+}
+.balance_forms_title{
+    font-weight: 500;
+    color: #000000cc;
+    font-size: 18px;
+
+}
+.set_value_container{
+    margin-top: 2px;
+    display: grid;
+    max-width: 128px;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 0px;
+}
+.valuta{
+    padding: 2px;
+    border: 1px solid white;
+}
+.valuta.active{
+    border: 1px solid orange;
+}
+.enter_value {
+    max-width: 288px;
+    max-height: 40px;
+}
+
+.enter_value_field{
+    margin-top: 4px;
+}
+
+.balance_buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.balance_footer{
+    margin-top: 32px;
+}
+
+.accordion {
+    margin-top: 12px;
+    color: #444;
+    padding: 1.25rem;
+    background-color: white;
+    border-radius: 0.375rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 20, .08), 0 1px 2px rgba(0, 0, 20, .08);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.accordion.active{
+    border-bottom: 1px solid #cecece;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.accordion.active .accordion_icon{
+    transform: rotate(180deg);
+}
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    color: #444;
+    font-size: 16px;
+    padding: 1.25rem;
+    background-color: white;
+    border-bottom-right-radius: 0.375rem;
+    border-bottom-left-radius: 0.375rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 20, .08), 0 1px 2px rgba(0, 0, 20, .08);
+    display: none;
+    overflow: hidden;
+}
+
+
+.accordion_title{
+    margin: 0;
+    text-align: left;
+    color: #000000b2;
+    font-size: 20px;
+    font-weight: 500;
+}
+/*///////////////////////////////////////////////////////////*/
 .header-gradient {
     background: linear-gradient(45deg, rgb(231, 67, 32), rgb(251, 155, 0));
 }
@@ -280,23 +385,11 @@
     color: #212b36;
 }
 
-.calc_left_block{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-}
-.calc_container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-}
+
 .calc_container_image {
-    height: 100%;
     padding: 0;
     position: relative;
-    max-height: 556px;
-    min-width: 556px;
+    max-height: 628px;
     border-radius: 8px;
     background-image: url("./assets/images/home.jpg");
     background-repeat: no-repeat;
@@ -327,12 +420,7 @@
     right: 8px;
 }
 
-.calc_left_block{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+
 .calc_right_block {
     display: flex;
     flex-direction: column;
@@ -418,12 +506,10 @@
 }
 
 .circles_footer {
-    width: 100%;
-    min-height: 112px;
     padding: 8px 16px;
+    margin-left: 16px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
     gap: 8px;
     border-radius: 0.375rem;
     border: 2px solid #2ECDE9;
@@ -439,20 +525,8 @@
 }
 
 .circles_footer_right_block {
-    text-align: center;
-   display: flex;
-   flex-direction: column;
-}
-
-.circles_footer_text {
-    font-size: 18px;
-    color: #212b36;
-
-}
-.circles_footer_limit {
-    color: orange;
-    font-size: 26px;
-    font-weight: 700;
+    text-align: end;
+    margin-bottom: 8px;
 }
 
 .perfomanceChart {
@@ -462,7 +536,7 @@
 .timer {
     color: #212b36;
     font-weight: 600;
-    font-size: 48px;
+    font-size: 40px;
 }
 
 .description_header {
@@ -518,21 +592,14 @@
     color: whitel
 }
 
-.ghost_text{
-    display: none;
-}
 @media (max-width: 1400px) {
     .calc_container_image {
-        max-height: 514px;
-        min-width: 514px
+        max-height: 538px;
+
     }
-    
 
     .header_container {
         width: 1283px;
-    }
-    .ghost_text{
-        display: inline;
     }
 }
 
@@ -547,8 +614,8 @@
     }
 
     .calc_container_image {
-        min-height: 514px;
-        max-width: 514px;
+        min-height: 580px;
+        max-width: 580px;
     }
 
     .calc_container {
@@ -561,9 +628,6 @@
     .calc_container_image.active {
         /*после перестроения картинка находится по центру и её не надо перемещать никуда*/
         transform: scale(1.5);
-    }
-    .ghost_text{
-        display: none;
     }
 
 }
