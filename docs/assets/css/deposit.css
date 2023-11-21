@@ -1,5 +1,7 @@
-.balance_container {
-
+.content_container{
+    margin: 0 auto;
+    max-width: 1463px;
+    padding: 0 20px;
 }
 .balance_actions {
     display: grid;
@@ -7,6 +9,7 @@
     column-gap: 24px;
 }
 .balance {
+    padding: 1rem;
 }
 .balance_title {
     margin: 0;
@@ -102,6 +105,8 @@
     font-size: 20px;
     font-weight: 500;
 }
+
+
 /*///////////////////////////////////////////////////////////*/
 .header-gradient {
     background: linear-gradient(45deg, rgb(231, 67, 32), rgb(251, 155, 0));
@@ -591,7 +596,27 @@
     background-color: #2ECDE9;
     color: whitel
 }
+/*/////////////////////*/
+.button_red {
+    background-color: rgba(255, 3, 3, 0.733);
+    border: none;
+    color: white;
+}
+.button_green {
+    background-color: rgba(0, 128, 0, 0.712);
+    border: none;
+    color: white;
+}
 
+.button_red:hover {
+    background-color: rgba(0, 128, 0, 0.712);
+}
+.button_green:hover {
+    background-color: rgba(255, 3, 3, 0.733);
+}
+
+.button_green {
+}
 @media (max-width: 1400px) {
     .calc_container_image {
         max-height: 538px;

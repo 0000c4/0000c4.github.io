@@ -573,7 +573,7 @@
 
     .calc_container_image {
         min-height: 360px;
-        max-width: 360px;
+        min-width: 360px;
     }
 }
 
@@ -589,8 +589,11 @@
     }
 
     .calc_container_image {
+        min-width:auto;
+        min-height: auto;
+
         min-height: 280px;
-        max-width: 280px;
+        width: 280px;
     }
 
     .circles_header {
