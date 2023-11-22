@@ -338,6 +338,9 @@ th:first-child{
 th:first-child h4{
     color: white !important;
 }
+.table{
+    margin-top: 16px;
+}
 @media (max-width: 1400px) {
     .header_container {
         width: 1283px;
