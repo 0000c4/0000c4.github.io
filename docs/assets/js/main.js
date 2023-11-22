@@ -1,41 +1,4 @@
-const viewer = document.getElementById("Image_viewer");
 const modal = document.getElementById("modal");
-const Image_viewer_left = document.getElementById("Image_viewer_left");
-const Image_viewer_right = document.getElementById("Image_viewer_right");
-//просмотр фотографий
-viewer.addEventListener("click", (event) => {
-    event.stopPropagation()
-    modal.classList.add("active");
-    viewer.classList.add("active");
-
-});
-
-modal.addEventListener("click", () => {
-    modal.classList.remove("active");
-    viewer.classList.remove("active");
-})
-//перелистывание фотографий
-const imageList = [
-    "./assets/images/home.jpg",
-    "./assets/images/home_1.jpg"
-];
-let indexList = 0;
-
-Image_viewer_left.addEventListener("click", (event) => {
-    event.stopPropagation()
-    if (indexList > 0) {
-        indexList--;
-        viewer.style.backgroundImage = `url(${imageList[indexList]})`
-    }
-});
-
-Image_viewer_right.addEventListener("click", (event) => {
-    event.stopPropagation()
-    if (indexList < imageList.length - 1) {
-        indexList++;
-        viewer.style.backgroundImage = `url(${imageList[indexList]})`
-    }
-});
 
 //бургер
 let burger = document.querySelector('.header__burger');

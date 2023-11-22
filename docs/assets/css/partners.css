@@ -317,7 +317,7 @@
     color: #2ECDE9 !important;
 }
 .table_ref{
-    background-color: orange;
+    background-color: #F06F0E;
 }
 
 .table_ref h4{
@@ -331,7 +331,7 @@ th h4{
     color: #303030 !important;
 }
 th:first-child{
-    background-color: orange;
+    background-color: #F06F0E;
     border: 1px solid white !important;
 }
 
