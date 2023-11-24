@@ -23,3 +23,8 @@ laungauge_links.forEach((element, index)=>{
         laungauge_icon[index].classList.add('active');
     });
 })
+//реф кнопка
+let ref_button = document.querySelector('.ref_button');
+ref_button.onclick = ()=>{
+    ref_button.innerHTML = 'Ссылка скопирована';
+}

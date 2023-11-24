@@ -568,7 +568,45 @@
     }
 
 }
+/*////////////////////////////////////////////////////*/
+.set_value_container{
+    margin-top: 8px;
+    margin-bottom: 16px;
+    display: flex;
+    gap:18px
+}
+.valuta{
+    width: 40px;
+    height: 40px;
+    padding: 2px;
+    border: 1px solid white;
+}
+.tooltip_valuta {
+    position: relative;
 
+}
+
+.tooltip_valuta .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: white;
+    color: rgb(59, 59, 59);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 105%;
+}
+.tooltip_valuta:hover .tooltiptext {
+    visibility: visible;
+}
+.valuta.active{
+    border: 1px solid orange;
+}
 @media (max-width: 992px) {
 
 
