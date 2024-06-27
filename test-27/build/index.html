@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Тестовое</title>
+</head>
+
+<body>
+    <header class="navbar">
+        <nav class="navbar__container wrapper">
+            <ul class="navbar__link_container">
+                <li> <a href="" class="link">Text</a>
+                <li> <a href="" class="link">Text</a>
+                <li> <a href="" class="link">Text</a>
+            </ul>
+            <div class="navbar__burger">
+                <span></span>
+            </div>
+            <div class="menu">
+                <ul class="menu__container">
+                    <li> <a href="" class="link">Text</a>
+                    <li> <a href="" class="link">Text</a>
+                    <li> <a href="" class="link">Text</a>
+                    <li> <a href="" class="link">Text</a>
+                </ul>
+                <button class="popup_button">Open pop-up button</button>
+            </div>
+
+            <div class="popup">
+                <span class="popup__close">X</span>
+                <span class="popup__title">
+                    Pop-up
+                </span>
+            </div>
+
+        </nav>
+    </header>
+    <main>
+        <section class="banner">
+            <div class="banner__container wrapper">
+                <svg class="back_slide" width="40" height="77" viewBox="0 0 40 77" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M39.0264 75.5961L1.7475 38.3171L39.0264 1.03821" stroke="white" stroke-width="2" />
+                </svg>
+
+                <div class="banner__slide active">
+                    <h1 class="banner__slide__title">H1 text</h1>
+                    <button class="popup_button banner__slide__button">Open pop-up button</button>
+                </div>
+
+                <div class="banner__slide">
+                    <h1 class="banner__slide__title">H1 text 2</h1>
+                    <button class="popup_button banner__slide__button">Open pop-up button</button>
+                </div>
+
+                <div class="banner__slide">
+                    <h1 class="banner__slide__title">H1 text 3</h1>
+                    <button class="popup_button banner__slide__button">Open pop-up button</button>
+                </div>
+
+                <div class="banner__slide">
+                    <h1 class="banner__slide__title">H1 text 4</h1>
+                    <button class="popup_button banner__slide__button">Open pop-up button</button>
+                </div>
+                <svg class="next_slide" width="40" height="77" viewBox="0 0 40 77" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.898804 1.03821L38.1777 38.3172L0.898804 75.5961" stroke="white" stroke-width="2" />
+                </svg>
+            </div>
+        </section>
+
+        <section class="h2_section wrapper" style="margin-top: -3px; margin-bottom: 3px;">
+            <h2 class="h2_section__title">H2 text</h2>
+        </section>
+
+        <section class="grid">
+            <div class="grid__container wrapper">
+                <div class="grid__item" style="grid-area: A"></div>
+                <div class="grid__item" style="grid-area: B"></div>
+                <div class="grid__item" style="grid-area: C"></div>
+                <div class="grid__item" style="grid-area: D"></div>
+            </div>
+        </section>
+        <section class="h2_section wrapper">
+            <h2 class="h2_section__title">H2 text</h2>
+        </section>
+
+        <section class="cards">
+            <div class="cards__container wrapper">
+                <div class="cards__card"></div>
+                <div class="cards__card"></div>
+                <div class="cards__card"></div>
+                <div class="cards__card"></div>
+                <div class="cards__card"></div>
+            </div>
+        </section>
+
+        <section class="open_up">
+            <div class="open_up__container">
+                <h2 class="open_up__title">Text utp</h2>
+                <button class="popup_button">Open pop-up button</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container wrapper">
+            <a href="" class="link">Text</a>
+            <a href="" class="link">Text</a>
+            <a href="" class="link">Text</a>
+            <a href="" class="link">Text</a>
+        </div>
+    </footer>
+</body>
+<script>
+    const burger = document.querySelector('.navbar__burger');
+    burger.onclick = function () {
+        const menu = document.querySelector('.menu');
+        menu.classList.toggle('active');
+        burger.classList.toggle('active')
+    }
+    //Выбор карточек
+    const cards = document.querySelectorAll('.cards__card');
+    cards.forEach(element => {
+        element.addEventListener('click', () => {
+            cards.forEach(del => { del.classList.remove('active') })
+            element.classList.toggle('active')
+        })
+    })
+
+    //кнопки открытия модального окна
+    const popup_buttons = document.querySelectorAll('.popup_button');
+    const popup = document.querySelector('.popup')
+    const close_popup = document.querySelector('.popup__close')
+
+    popup_buttons.forEach(element => {
+        element.addEventListener('click', () => {
+            popup.classList.toggle('active')
+        })
+    })
+
+    close_popup.addEventListener('click', () => {
+        popup.classList.toggle('active')
+    })
+
+    //слайдер
+    const slides = document.querySelectorAll('.banner__slide')
+    const back_slide = document.querySelector('.back_slide')
+    const next_slide = document.querySelector('.next_slide')
+    let current_slide = 0;
+
+    next_slide.addEventListener('click', () => {
+        if (current_slide < slides.length-1) {
+            current_slide++;
+            slides.forEach(slide => {slide.classList.remove('active') })
+            slides[current_slide].classList.add('active')
+        }
+    })
+
+    back_slide.addEventListener('click', () => {
+        if (current_slide > 0) {
+            current_slide--;
+            slides.forEach(slide => {slide.classList.remove('active') })
+            slides[current_slide].classList.add('active')
+        }
+    })
+
+</script>
+
+</html>

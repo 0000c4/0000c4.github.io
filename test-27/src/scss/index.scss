@@ -1,0 +1,401 @@
+@import './reset.scss';
+@import "./mixins.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+
+$background-main: #A6C9FF;
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: $background-main;
+  color: white;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  max-width: 1170px;
+  margin-inline: auto;
+}
+
+.popup_button {
+  padding: 15px 25px;
+  background-color: #FF4B4B;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28.13px;
+
+  @include respond(phone) {
+    padding: 8px 18px;
+    font-size: 20px;
+  }
+
+}
+
+.link {
+  color: white;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 45px;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline
+  }
+}
+
+.navbar {
+
+  background-color: #B47FF6;
+
+  &__container {
+    padding: 55px 55.63px 48px 155.36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include respond(phone) {
+      justify-content: end;
+      padding: 25px;
+    }
+  }
+
+  &__link_container {
+    display: flex;
+    gap: 60px;
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  &__burger {
+    display: block;
+    position: relative;
+    width: 43.37px;
+    height: 26px;
+    z-index: 100;
+  }
+
+  &__burger.active::before {
+    bottom: 13px;
+    transform: rotate(45deg);
+  }
+
+  &__burger.active::after {
+    top: 9px;
+    transform: rotate(-45deg);
+  }
+
+  &__burger.active span {
+    transform: scale(0);
+  }
+
+  &__burger::before,
+  &__burger::after {
+    content: '';
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    transition: all 0.5s ease;
+  }
+
+  &__burger::after {
+    bottom: 0;
+  }
+
+  &__burger span {
+    position: absolute;
+    background-color: white;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    top: 11px;
+    transition: all 0.5s ease;
+
+  }
+
+  .header_burger::before {
+    top: 0px;
+  }
+}
+
+.menu {
+  display: none;
+  padding: 33px 64.5px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 451px;
+  z-index: 99;
+
+  @include respond(phone) {
+    width: 358px;
+  }
+
+  background-color: $background-main;
+  color: white;
+  border: 1px solid #00FF4A;
+
+  &.active {
+    display: block;
+  }
+
+  &__container {
+    margin-bottom: 55px;
+    display: flex;
+    flex-direction: column;
+    gap: 39px;
+  }
+}
+
+.banner {
+  margin-top: 40px;
+  margin-bottom: 5px;
+  background-color: #7029CB;
+
+  &__container {
+    padding: 47.04px 50.82px 52.4px 51.75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respond(phone) {
+      padding: 25px 15px;
+    }
+
+  }
+
+  &__slide {
+    padding-right: 102px;
+    margin-bottom: 10px;
+    display: none;
+    align-items: center;
+    gap: 32px;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    &.active {
+      display: flex;
+    }
+
+    &__title {
+      font-size: 45px;
+      line-height: 45px;
+      font-weight: 700;
+      word-spacing: 12px;
+
+      @include respond(phone) {
+        font-size: 30px;
+        line-height: 30px;
+        font-weight: 600;
+      }
+    }
+
+    &__button {
+      box-shadow: 2px 5px 10px 0px #497957;
+    }
+
+  }
+
+  .next_slide,
+  .back_slide {
+    height: 77px;
+
+    @include respond(phone) {
+      height: 42px;
+    }
+  }
+
+}
+
+.h2_section {
+  padding-block: 40px;
+  padding-left: 11px;
+  display: flex;
+  justify-content: center;
+
+  &__title {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 45px;
+  }
+}
+
+.grid {
+  &__container {
+    margin-top: -3px;
+    margin-bottom: 3px;
+    display: grid;
+    grid-template-columns: 33.5% 50.427% 13.846%;
+    grid-template-rows: 198px 198px;
+    gap: 13px 13px;
+    grid-template-areas:
+      "A B B"
+      "C C D";
+
+    @include respond(phone) {
+      grid-template-columns: 30.5% 47.427% 15.846%;
+    }
+  }
+
+  &__item {
+    position: relative;
+    background-color: #3ADE4B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  counter-reset: item;
+
+  &__item::after {
+    counter-increment: item;
+    content: counter(item);
+
+    font-weight: 400;
+    font-size: 53px;
+    line-height: 62.11px;
+
+    @include respond(phone) {
+      font-weight: 400;
+      font-size: 42px;
+      line-height: 32px;
+    }
+  }
+}
+
+.cards {
+  &__container {
+    max-width: 1120px;
+    padding: 25px;
+    display: flex;
+    gap: 20px;
+    background-color: #D4FF5A;
+    border-radius: 30px;
+
+    @include respond(tab-port) {
+      margin: 0 1rem;
+    }
+
+    @include respond(phone) {
+      gap: 10px;
+    }
+  }
+
+  &__card {
+    width: 198px;
+    aspect-ratio: 1 / 1;
+    background-color: #497957;
+    border: 2px solid #00FF4A;
+    border-radius: 35px;
+
+    @include respond(phone) {
+      border-radius: 18px;
+    }
+
+    &.active {
+      box-shadow: 2px 5px 10px 0px #497957;
+    }
+  }
+}
+
+.open_up {
+  &__container {
+    margin-block: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 45px;
+  }
+}
+
+.footer {
+  background-color: #D87FF6;
+  padding-block: 27.5px;
+
+  &__container {
+    padding-right: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 175px;
+
+    @include respond(tab-port) {
+      padding: 0;
+      gap: 0px;
+      justify-content: space-around;
+    }
+
+    @include respond(phone) {
+      align-items: center;
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
+}
+
+.popup {
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 400px;
+  height: 400px;
+
+  @include respond(phone) {
+    width: 320px;
+    height: 320px;
+  }
+
+  background-color: #a6caffad;
+  box-shadow: 2px 5px 10px 0px #497957;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+
+  &.active {
+    display: flex;
+  }
+
+  &__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 8px 15px;
+    background-color: #497957;
+    color: white;
+    border-radius: 5px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 45px;
+  }
+}
